@@ -1,9 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Abel Alemayehu</title>
+	<title>Abel Alemayehu — Software Engineer &amp; Product Builder</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Abel Alemayehu is a software engineer and product builder specializing in full-stack development, AI engineering, UI/UX, and product development. Based in Addis Ababa, Ethiopia.">
+	<meta name="author" content="Abel Alemayehu">
+	<meta property="og:title" content="Abel Alemayehu — Software Engineer &amp; Product Builder">
+	<meta property="og:description" content="Software engineer and product builder specializing in full-stack development, AI engineering, UI/UX, and product development. Based in Addis Ababa, Ethiopia.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://abelalemayehu.pro.et/">
+	<meta property="og:image" content="https://abelalemayehu.pro.et/image/abel.jpg">
+	<link rel="icon" type="image/jpeg" href="image/abel.jpg">
 	
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -19,6 +27,9 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+<div class="pf-scroll-progress" id="scroll-progress"></div>
+<div class="pf-cursor" id="cursor"></div>
 	
 	
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -32,9 +43,15 @@
 				<ul class="navbar-nav nav ml-auto">
 					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
-					<li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li>
-					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+					<li class="nav-item"><a href="#experience-section" class="nav-link"><span>Experience</span></a></li>
+					<li class="nav-item"><a href="#capabilities-section" class="nav-link"><span>Capabilities</span></a></li>
+					<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Stack</span></a></li>
+					<li class="nav-item cta"><a href="#contact-section" class="nav-link"><span>Let's Talk</span></a></li>
+					<li class="nav-item">
+						<button class="pf-theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+							<span class="pf-theme-icon">☀</span>
+						</button>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -44,16 +61,34 @@
 			<div class="slider-item">
 				<div class="overlay"></div>
 				<div class="container-fluid px-md-0">
-					<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-						<div class="one-third order-md-last img" style="background-image:url(image/BEB_8090_do.JPG);">
-							<div class="overlay"></div>
-							<div class="overlay-1"></div>
-						</div>
-						<div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+					<div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+						<div class="col-lg-6 col-md-12 d-flex align-items-center hero-content">
 							<div class="text">
-								<span class="subheading">Hello! This is Abel</span>
-								<h1 class="mb-4 mt-3">Software Engineer, <span>UI/UX</span> Designer &amp; Full-stack Developer</h1>
-								<p><a href="#" class="btn btn-primary">Hire me</a> <a href="#" class="btn btn-primary btn-outline-primary">Download CV</a></p>
+								<span class="subheading hero-eyebrow">HELLO, I'M ABEL ALEMAYEHU</span>
+								<h1 class="mb-4 mt-3 hero-title">Software Engineer<br>&amp; Product Builder</h1>
+								<p class="hero-subtitle">I design and build modern digital products<br>from idea to production.</p>
+								<p class="pf-hero-supporting">Full-stack Development · AI Engineering · UI/UX · Product Development</p>
+								<div class="hero-ctas">
+									<a href="#skills-section" class="btn btn-primary hero-btn-primary">View My Work</a>
+									<a href="#contact-section" class="btn btn-primary btn-outline-primary hero-btn-secondary">Let's Talk</a>
+								</div>
+								<div class="hero-status">
+									<span class="status-dot"></span>
+									Available for freelance &amp; software projects
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center hero-visual-wrap">
+							<div class="hero-visual">
+								<div class="hero-img" style="background-image: url(image/BEB_8090_do.JPG);"></div>
+								<div class="hero-float-card hero-card-1">
+									<div class="card-label">Software Engineer</div>
+									<div class="card-value">React &middot; Python &middot; APIs</div>
+								</div>
+								<div class="hero-float-card hero-card-2">
+									<div class="card-label">Product Design</div>
+									<div class="card-value">Figma &rarr; Code &rarr; Ship</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -63,19 +98,266 @@
 			<div class="slider-item">
 				<div class="overlay"></div>
 				<div class="container-fluid px-md-0">
-					<div class="row d-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-						<div class="one-third order-md-last img" style="background-image:url(image/BEB_8122.JPG);">
-							<div class="overlay"></div>
-							<div class="overlay-1"></div>
-						</div>
-						<div class="one-forth d-flex align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+					<div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+						<div class="col-lg-6 col-md-12 d-flex align-items-center hero-content">
 							<div class="text">
-								<span class="subheading">We Design &amp; Build Brands</span>
-								<h1 class="mb-4 mt-3">Hi, I am <span>Abel</span> This is my favorite work.</h1>
-								<p><a href="#" class="btn btn-primary">Hire me</a> <a href="https://drive.google.com/file/d/1lue7auyq18U_ID7h96ymZddWX7aq5uta/view?usp=drive_link" target="_blank" class="btn btn-primary btn-outline-primary">Download CV</a></p>
+								<span class="subheading hero-eyebrow">FULL-STACK DEVELOPER</span>
+								<h1 class="mb-4 mt-3 hero-title">From Concept<br>to Production</h1>
+								<p class="hero-subtitle">Building scalable applications with modern<br>technologies and clean architecture.</p>
+								<div class="hero-ctas">
+									<a href="#capabilities-section" class="btn btn-primary hero-btn-primary">View Services</a>
+									<a href="#contact-section" class="btn btn-primary btn-outline-primary hero-btn-secondary">Let's Talk</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-12 d-flex align-items-center justify-content-center hero-visual-wrap">
+							<div class="hero-visual">
+								<div class="hero-img" style="background-image: url(image/BEB_8122.JPG);"></div>
+								<div class="hero-float-card hero-card-1">
+									<div class="card-label">Full-Stack</div>
+									<div class="card-value">Django &middot; FastAPI &middot; PostgreSQL</div>
+								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="tech-strip" id="tech-strip">
+		<div class="container">
+			<div class="tech-strip-label">Technologies I work with</div>
+			<div class="tech-marquee">
+				<div class="tech-marquee__track">
+					<span class="tech-marquee__item">React</span>
+					<span class="tech-marquee__item">JavaScript</span>
+					<span class="tech-marquee__item">Python</span>
+					<span class="tech-marquee__item">Django</span>
+					<span class="tech-marquee__item">Figma</span>
+					<span class="tech-marquee__item">Git</span>
+					<span class="tech-marquee__item">Bootstrap</span>
+					<span class="tech-marquee__item">REST APIs</span>
+					<span class="tech-marquee__item">HTML / CSS</span>
+					<span class="tech-marquee__item">PostgreSQL</span>
+					<span class="tech-marquee__item">React</span>
+					<span class="tech-marquee__item">JavaScript</span>
+					<span class="tech-marquee__item">Python</span>
+					<span class="tech-marquee__item">Django</span>
+					<span class="tech-marquee__item">Figma</span>
+					<span class="tech-marquee__item">Git</span>
+					<span class="tech-marquee__item">Bootstrap</span>
+					<span class="tech-marquee__item">REST APIs</span>
+					<span class="tech-marquee__item">HTML / CSS</span>
+					<span class="tech-marquee__item">PostgreSQL</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="pf-projects-section ftco-section" id="selected-work">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">Selected Work</span>
+					<h2 class="mb-4">Projects I've designed &amp; built</h2>
+					<p>A selection of products, systems and digital experiences I've designed and built.</p>
+				</div>
+			</div>
+
+			<div class="row pf-projects">
+				<div class="col-lg-7 mb-4 pf-project-item">
+					<a href="#" class="pf-project-card pf-project-card--featured" target="_blank" rel="noopener">
+						<div class="pf-project-card__image" style="background-image: url('image/ecommerce-project.svg');"></div>
+						<div class="pf-project-card__overlay"></div>
+						<div class="pf-project-card__content">
+							<div class="pf-project-card__meta">
+								<span class="pf-project-card__category">Full-Stack Application</span>
+								<span class="pf-project-card__role">Product Designer &amp; Developer</span>
+							</div>
+							<h3 class="pf-project-card__title">E-Commerce Platform</h3>
+							<p class="pf-project-card__desc">A complete online shopping platform with product catalog, cart, checkout, and admin dashboard.</p>
+							<div class="pf-project-card__tech">
+								<span>React</span>
+								<span>Python</span>
+								<span>PostgreSQL</span>
+								<span>Figma</span>
+							</div>
+							<span class="pf-project-card__link">View Project <i class="fa fa-arrow-right"></i></span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-5 mb-4 pf-project-item">
+					<a href="#" class="pf-project-card" target="_blank" rel="noopener">
+						<div class="pf-project-card__image" style="background-image: url('image/saas-dashboard-project.svg');"></div>
+						<div class="pf-project-card__overlay"></div>
+						<div class="pf-project-card__content">
+							<div class="pf-project-card__meta">
+								<span class="pf-project-card__category">Web Application</span>
+								<span class="pf-project-card__role">Full-Stack Developer</span>
+							</div>
+							<h3 class="pf-project-card__title">SaaS Dashboard</h3>
+							<p class="pf-project-card__desc">Analytics and management dashboard for tracking business metrics and user engagement.</p>
+							<div class="pf-project-card__tech">
+								<span>Vue.js</span>
+								<span>Django</span>
+								<span>REST APIs</span>
+							</div>
+							<span class="pf-project-card__link">View Project <i class="fa fa-arrow-right"></i></span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-5 mb-4 pf-project-item">
+					<a href="#" class="pf-project-card" target="_blank" rel="noopener">
+						<div class="pf-project-card__image" style="background-image: url('image/health-fitness-project.svg');"></div>
+						<div class="pf-project-card__overlay"></div>
+						<div class="pf-project-card__content">
+							<div class="pf-project-card__meta">
+								<span class="pf-project-card__category">Mobile &amp; Web</span>
+								<span class="pf-project-card__role">UI/UX Designer</span>
+							</div>
+							<h3 class="pf-project-card__title">Health &amp; Fitness App</h3>
+							<p class="pf-project-card__desc">Cross-platform mobile application for tracking workouts, nutrition, and health goals.</p>
+							<div class="pf-project-card__tech">
+								<span>React Native</span>
+								<span>Node.js</span>
+								<span>Figma</span>
+							</div>
+							<span class="pf-project-card__link">View Project <i class="fa fa-arrow-right"></i></span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-7 mb-4 pf-project-item">
+					<a href="#" class="pf-project-card pf-project-card--featured" target="_blank" rel="noopener">
+						<div class="pf-project-card__image" style="background-image: url('image/payment-gateway-project.svg');"></div>
+						<div class="pf-project-card__overlay"></div>
+						<div class="pf-project-card__content">
+							<div class="pf-project-card__meta">
+								<span class="pf-project-card__category">API &amp; Backend</span>
+								<span class="pf-project-card__role">Backend Engineer</span>
+							</div>
+							<h3 class="pf-project-card__title">Payment Gateway Integration</h3>
+							<p class="pf-project-card__desc">Secure payment processing system with support for multiple providers and webhook handling.</p>
+							<div class="pf-project-card__tech">
+								<span>Python</span>
+								<span>FastAPI</span>
+								<span>Docker</span>
+								<span>PostgreSQL</span>
+							</div>
+							<span class="pf-project-card__link">View Project <i class="fa fa-arrow-right"></i></span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-5 mb-4 pf-project-item">
+					<a href="#" class="pf-project-card" target="_blank" rel="noopener">
+						<div class="pf-project-card__image" style="background-image: url('image/medivision-project.svg');"></div>
+						<div class="pf-project-card__overlay"></div>
+						<div class="pf-project-card__content">
+							<div class="pf-project-card__meta">
+								<span class="pf-project-card__category">AI / Medical Tech</span>
+								<span class="pf-project-card__role">AI Engineer &amp; Backend Developer</span>
+							</div>
+							<h3 class="pf-project-card__title">MediVision</h3>
+							<p class="pf-project-card__desc">Medical AI platform with machine-learning models for image processing and TB label extraction, built with Django REST API and a PyQt5 desktop application.</p>
+							<div class="pf-project-card__tech">
+								<span>Django</span>
+								<span>REST API</span>
+								<span>AI/ML</span>
+								<span>PyQt5</span>
+								<span>Python</span>
+							</div>
+							<span class="pf-project-card__link">View Project <i class="fa fa-arrow-right"></i></span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-7 mb-4 pf-project-item">
+					<a href="#" class="pf-project-card pf-project-card--featured" target="_blank" rel="noopener">
+						<div class="pf-project-card__image" style="background-image: url('image/guzo-jobs-project.svg');"></div>
+						<div class="pf-project-card__overlay"></div>
+						<div class="pf-project-card__content">
+							<div class="pf-project-card__meta">
+								<span class="pf-project-card__category">Full-Stack Application</span>
+								<span class="pf-project-card__role">Product Developer</span>
+							</div>
+							<h3 class="pf-project-card__title">Guzo-Jobs</h3>
+							<p class="pf-project-card__desc">A community-driven delivery platform connecting travelers with people seeking items from specific Ethiopian destinations, leveraging existing travel routes and public/private transport.</p>
+							<div class="pf-project-card__tech">
+								<span>Full-stack</span>
+								<span>Web Application</span>
+								<span>Product Development</span>
+							</div>
+							<span class="pf-project-card__link">View Project <i class="fa fa-arrow-right"></i></span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-5 mb-4 pf-project-item">
+					<a href="#" class="pf-project-card" target="_blank" rel="noopener">
+						<div class="pf-project-card__image" style="background-image: url('image/bileyx-project.svg');"></div>
+						<div class="pf-project-card__overlay"></div>
+						<div class="pf-project-card__content">
+							<div class="pf-project-card__meta">
+								<span class="pf-project-card__category">Web Application</span>
+								<span class="pf-project-card__role">Frontend Developer</span>
+							</div>
+							<h3 class="pf-project-card__title">Bileyx</h3>
+							<p class="pf-project-card__desc">Event management and ticketing platform built with Vue.js, featuring event promotion, discovery, ticket selection, online purchasing, and event lifecycle management.</p>
+							<div class="pf-project-card__tech">
+								<span>Vue.js</span>
+								<span>Event Platform</span>
+								<span>Ticketing</span>
+								<span>Frontend</span>
+							</div>
+							<span class="pf-project-card__link">View Project <i class="fa fa-arrow-right"></i></span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-5 mb-4 pf-project-item">
+					<a href="https://tatatech.net/" class="pf-project-card" target="_blank" rel="noopener">
+						<div class="pf-project-card__image" style="background-image: url('image/tatatech-project.svg');"></div>
+						<div class="pf-project-card__overlay"></div>
+						<div class="pf-project-card__content">
+							<div class="pf-project-card__meta">
+								<span class="pf-project-card__category">Corporate Website · Digital Technology</span>
+								<span class="pf-project-card__role">Service Provider · Web Developer · UI/UX</span>
+							</div>
+							<h3 class="pf-project-card__title">TataTech</h3>
+							<p class="pf-project-card__desc">Company profile website for TataTech, presenting its digital technology services and business offering through a responsive professional web experience.</p>
+							<div class="pf-project-card__tech">
+								<span>Web Development</span>
+								<span>UI/UX</span>
+								<span>Responsive Design</span>
+							</div>
+							<span class="pf-project-card__link">View Project <i class="fa fa-arrow-right"></i></span>
+						</div>
+					</a>
+				</div>
+
+				<div class="col-lg-7 mb-4 pf-project-item">
+					<a href="https://app.justap.io/card/tatatech/AbelAlemayehu" class="pf-project-card pf-project-card--featured" target="_blank" rel="noopener">
+						<div class="pf-project-card__image" style="background-image: url('image/justap-digital-card.svg');"></div>
+						<div class="pf-project-card__overlay"></div>
+						<div class="pf-project-card__content">
+							<div class="pf-project-card__meta">
+								<span class="pf-project-card__category">Digital Business Card · NFC Solution</span>
+								<span class="pf-project-card__role">Service Provider · Designer</span>
+							</div>
+							<h3 class="pf-project-card__title">JusTap Digital Business Card</h3>
+							<p class="pf-project-card__desc">NFC-enabled digital business card and campaign experiences powered by NFC and QR technology, for business identity, contact sharing, and digital engagement.</p>
+							<div class="pf-project-card__tech">
+								<span>NFC Technology</span>
+								<span>Digital Identity</span>
+								<span>Contact Sharing</span>
+							</div>
+							<span class="pf-project-card__link">View Project <i class="fa fa-arrow-right"></i></span>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -90,8 +372,8 @@
 							<span class="flaticon-suitcase"></span>
 						</div>
 						<div class="text">
-							<strong class="number" data-number="10">0</strong>
-							<span>Project Complete</span>
+							<strong>Production-grade applications</strong>
+							<span>Projects Delivered</span>
 						</div>
 					</div>
 				</div>
@@ -101,8 +383,8 @@
 							<span class="flaticon-loyalty"></span>
 						</div>
 						<div class="text">
-							<strong class="number" data-number="8">0</strong>
-							<span>Happy Clients</span>
+							<strong>Trusted partnerships</strong>
+							<span>Client Collaboration</span>
 						</div>
 					</div>
 				</div>
@@ -112,8 +394,8 @@
 							<span class="flaticon-coffee"></span>
 						</div>
 						<div class="text">
-							<strong class="number" data-number="7">0</strong>
-							<span>Cups of coffee</span>
+							<strong>End-to-end product design</strong>
+							<span>UI/UX Expertise</span>
 						</div>
 					</div>
 				</div>
@@ -123,8 +405,8 @@
 							<span class="flaticon-calendar"></span>
 						</div>
 						<div class="text">
-							<strong class="number" data-number="4">0</strong>
-							<span>Years experienced</span>
+							<strong>Full-stack architecture</strong>
+							<span>Modern Tech Stacks</span>
 						</div>
 					</div>
 				</div>
@@ -136,7 +418,7 @@
 		<div class="container">
 			<div class="row d-flex no-gutters">
 				<div class="col-md-6 col-lg-5 d-flex">
-					<div class="img-about img d-flex align-items-stretch">
+					<div class="img-about img d-flex align-items-stretch pf-about-photo">
 						<div class="overlay"></div>
 						<div class="img d-flex align-self-stretch align-items-center" style="background-image:url(image/BEB_8096.JPG);">
 						</div>
@@ -146,50 +428,18 @@
 					<div class="py-md-5">
 						<div class="row justify-content-start pb-3">
 							<div class="col-md-12 heading-section ftco-animate">
-								<span class="subheading">My Intro</span>
-								<h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">About Me</h2>
-								<p>Hi, I’m Abel Alemayehu, a multifaceted software engineer with a passion for bridging the gap between robust code and compelling visuals. My expertise spans full-stack web and mobile development, where I build scalable, production-ready applications with a strong focus on user-centric design and seamless functionality.
+								<span class="subheading">About</span>
+								<h2 class="mb-4 pf-about-heading">Building at the intersection of<br>engineering and design.</h2>
+								<p class="pf-about-lead">I'm Abel Alemayehu, a software engineer who designs and builds modern digital products from idea to production.</p>
+								<p>My work spans full-stack web and mobile development, software design, and creative problem-solving. I build scalable, production-ready applications with a strong focus on user-centric design—bridging the gap between robust backend systems and compelling frontend experiences.</p>
+								<p>Beyond engineering, I bring a design-driven approach to digital products through interface design, visual communication, and creative workflows. Whether I'm architecting APIs, designing pixel-perfect interfaces, or exploring AI-assisted development, I care about making technology feel clear, usable, and purposeful.</p>
+								<p class="pf-about-focus">Core focus: <strong>Full-stack Development</strong> · <strong>AI Engineering</strong> · <strong>UI/UX</strong> · <strong>Product Design</strong></p>
 
-										Beyond engineering, I bring a creative edge to the table through my background in Graphics Design and UI/UX. I specialize in crafting intuitive interfaces using Figma, transforming ideas into polished, user-friendly prototypes. My visual toolkit is further strengthened by mastery of Adobe Photoshop—enabling me to create everything from detailed 3D renders and impactful posters to professional logos and flyers—alongside video editing proficiency in Adobe Premiere Pro, CapCut, and Wondershare.
-
-										Whether I’m architecting a backend system, designing a pixel-perfect interface, or editing a dynamic visual story, my goal remains the same: to combine technical precision with creative problem-solving to deliver high-quality, innovative solutions. I am always eager to leverage cutting-edge technologies to tackle complex challenges and drive meaningful progress.</p>
-
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Name:</span> <span>Abel Alemayehu</span></li>
-									<li class="d-flex"><span>Date of birth:</span> <span>September 02, 2002</span></li>
-									<li class="d-flex"><span>Address:</span> <span>Ethiopia, Addis Ababa</span></li>
-									<li class="d-flex"><span>Zip code:</span> <span>1000</span></li>
-									<li class="d-flex"><span>Email:</span> <span>ordialex1226@gmail.com</span></li>
-									<li class="d-flex"><span>Phone: </span> <span>+251-965-655-184</span></li>
+								<ul class="about-info mt-4 px-md-0 px-2 pf-about-meta">
+									<li class="d-flex"><span>Based in:</span> <span>Addis Ababa, Ethiopia</span></li>
+									<li class="d-flex"><span>Email:</span> <span><a href="mailto:ordialex1226@gmail.com">ordialex1226@gmail.com</a></span></li>
+									<li class="d-flex"><span>Phone:</span> <span><a href="tel:+251965655184">+251-965-655-184</a></span></li>
 								</ul>
-							</div>
-							<div class="col-md-12">
-								<div class="my-interest d-lg-flex w-100">
-									<div class="interest-wrap d-flex align-items-center">
-										<div class="icon d-flex align-items-center justify-content-center">
-											<span class="flaticon-listening"></span>
-										</div>
-										<div class="text">Music</div>
-									</div>
-									<div class="interest-wrap d-flex align-items-center">
-										<div class="icon d-flex align-items-center justify-content-center">
-											<span class="flaticon-suitcases"></span>
-										</div>
-										<div class="text">Travel</div>
-									</div>
-									<div class="interest-wrap d-flex align-items-center">
-										<div class="icon d-flex align-items-center justify-content-center">
-											<span class="flaticon-video-player"></span>
-										</div>
-										<div class="text">Movie</div>
-									</div>
-									<div class="interest-wrap d-flex align-items-center">
-										<div class="icon d-flex align-items-center justify-content-center">
-											<span class="flaticon-football"></span>
-										</div>
-										<div class="text">Sports</div>
-									</div>
-								</div>
 							</div>
 						</div>
 					</div>
@@ -197,282 +447,374 @@
 			</div>
 		</div>
 	</section>
-	
+
+	<section class="ftco-section pf-experience-section" id="experience-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">Experience</span>
+					<h2 class="mb-4">Professional background</h2>
+					<p>A selection of my recent roles and contributions.</p>
+				</div>
+			</div>
+
+			<div class="row pf-experience-list">
+				<div class="col-md-12 mb-4 pf-experience-item">
+					<div class="pf-experience-card">
+						<div class="pf-experience-header">
+							<div class="pf-experience-title-group">
+								<h3 class="pf-experience-role">Technology Service Provider</h3>
+								<p class="pf-experience-company">TataTech · Ethiopia</p>
+							</div>
+							<div class="pf-experience-meta">
+								<span class="pf-experience-period">Ongoing</span>
+								<span class="pf-experience-location">Ethiopia</span>
+							</div>
+						</div>
+						<p class="pf-experience-desc">Service-provider partnership with TataTech, supporting software development, web solutions, and digital technology services. Built the company profile website to present its business offering through a responsive professional web experience.</p>
+						<div class="pf-experience-tags">
+							<span>Web Development</span>
+							<span>UI/UX</span>
+							<span>Digital Solutions</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mb-4 pf-experience-item">
+					<div class="pf-experience-card">
+						<div class="pf-experience-header">
+							<div class="pf-experience-title-group">
+								<h3 class="pf-experience-role">Full-Stack Developer</h3>
+								<p class="pf-experience-company">E-Commerce Website Solution</p>
+							</div>
+							<div class="pf-experience-meta">
+								<span class="pf-experience-period">05/2025 – 04/2026</span>
+								<span class="pf-experience-location">Addis Ababa, Ethiopia</span>
+							</div>
+						</div>
+						<p class="pf-experience-desc">End-to-end development of a full-stack e-commerce platform including frontend and backend development, responsive shopping experience, secure payment gateway integration, real-time order management, inventory tracking, authentication, product catalog management, search/filter functionality, and scalable RESTful APIs.</p>
+						<div class="pf-experience-tags">
+							<span>Full-Stack</span>
+							<span>Payment Integration</span>
+							<span>REST APIs</span>
+							<span>Go</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mb-4 pf-experience-item">
+					<div class="pf-experience-card">
+						<div class="pf-experience-header">
+							<div class="pf-experience-title-group">
+								<h3 class="pf-experience-role">Generative AI Engineer</h3>
+								<p class="pf-experience-company">AI Development</p>
+							</div>
+							<div class="pf-experience-meta">
+								<span class="pf-experience-period">08/2024 – 01/2026</span>
+								<span class="pf-experience-location">Adama, Ethiopia</span>
+							</div>
+						</div>
+						<p class="pf-experience-desc">Worked on AI development with a focus on prompt workflow optimization, improving model output quality, and RAG implementation across 5,000+ internal documents. Applied machine learning and engineering practices to improve document understanding and retrieval accuracy.</p>
+						<div class="pf-experience-tags">
+							<span>AI Engineering</span>
+							<span>RAG</span>
+							<span>Prompt Workflows</span>
+							<span>Machine Learning</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-12 mb-4 pf-experience-item">
+					<div class="pf-experience-card">
+						<div class="pf-experience-header">
+							<div class="pf-experience-title-group">
+								<h3 class="pf-experience-role">Design / Digital Work</h3>
+								<p class="pf-experience-company">Self-Employed</p>
+							</div>
+							<div class="pf-experience-meta">
+								<span class="pf-experience-period">2021 – Present</span>
+								<span class="pf-experience-location">Addis Ababa, Ethiopia</span>
+							</div>
+						</div>
+						<p class="pf-experience-desc">Independent design and digital work focused on interface design, visual communication, and creative problem-solving using Adobe Photoshop and related tools.</p>
+						<div class="pf-experience-tags">
+							<span>UI/UX</span>
+							<span>Graphics Design</span>
+							<span>Adobe Photoshop</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section pf-education-section" id="education-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">Education</span>
+					<h2 class="mb-4">Academic background</h2>
+				</div>
+			</div>
+
+			<div class="row pf-education-list">
+				<div class="col-md-4 mb-4 pf-education-item">
+					<div class="pf-education-card">
+						<div class="pf-education-degree">Bachelor's Degree</div>
+						<h3 class="pf-education-school">Software Engineering</h3>
+						<p class="pf-education-school">Adama Science and Technology University</p>
+						<p class="pf-education-period">2021 – 2026</p>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4 pf-education-item">
+					<div class="pf-education-card">
+						<div class="pf-education-degree">Certificate</div>
+						<h3 class="pf-education-school">Software Engineering</h3>
+						<p class="pf-education-school">ALX Africa</p>
+						<p class="pf-education-period">2023 – 2025</p>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4 pf-education-item">
+					<div class="pf-education-card">
+						<div class="pf-education-degree">Professional Course</div>
+						<h3 class="pf-education-school">HCIA-DataCom</h3>
+						<p class="pf-education-school">Huawei ICT Academy</p>
+						<p class="pf-education-period">100 hours</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section pf-capabilities-section" id="capabilities-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">Engineering &amp; AI</span>
+					<h2 class="mb-4">What I do</h2>
+					<p>Three core areas where I design, build, and ship products.</p>
+				</div>
+			</div>
+
+			<div class="row pf-capabilities">
+				<div class="col-md-4 mb-4 pf-capability-item">
+					<div class="pf-capability-card">
+						<div class="pf-capability-number">01</div>
+						<h3 class="pf-capability-title">AI Engineering</h3>
+						<p class="pf-capability-desc">RAG implementation, prompt workflow optimization, and machine-learning-powered applications.</p>
+						<div class="pf-capability-tags">
+							<span>RAG</span>
+							<span>Prompt Workflows</span>
+							<span>AI Applications</span>
+							<span>Machine Learning</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4 pf-capability-item">
+					<div class="pf-capability-card">
+						<div class="pf-capability-number">02</div>
+						<h3 class="pf-capability-title">Full-stack Engineering</h3>
+						<p class="pf-capability-desc">Frontend and backend systems, REST APIs, databases, and authentication for business applications.</p>
+						<div class="pf-capability-tags">
+							<span>Frontend</span>
+							<span>Backend</span>
+							<span>REST APIs</span>
+							<span>Databases</span>
+							<span>Authentication</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4 mb-4 pf-capability-item">
+					<div class="pf-capability-card">
+						<div class="pf-capability-number">03</div>
+						<h3 class="pf-capability-title">Product Engineering</h3>
+						<p class="pf-capability-desc">User flows, interface design, and responsive experiences from concept to production.</p>
+						<div class="pf-capability-tags">
+							<span>UI/UX</span>
+							<span>Figma</span>
+							<span>User Flows</span>
+							<span>Responsive</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section class="ftco-section bg-light" id="skills-section">
 		<div class="container">
 			<div class="row justify-content-center pb-5">
 				<div class="col-md-12 heading-section text-center ftco-animate">
-					<span class="subheading">Skills</span>
-					<h2 class="mb-4">My Skills</h2>
-					<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+					<span class="subheading">Technical Stack</span>
+					<h2 class="mb-4">Technologies I work with</h2>
+					<p>Tools and technologies I use to design, build, and ship products.</p>
 				</div>
 			</div>
-			<div class="row progress-circle mb-5">
-				<div class="col-lg-4 mb-4">
-					<div class="bg-white rounded-lg shadow p-4">
-						<h2 class="h5 font-weight-bold text-center mb-4">Javascript</h2>
 
-						<!-- Progress bar 1 -->
-						<div class="progress mx-auto" data-value='95'>
-							<span class="progress-left">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<span class="progress-right">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-								<div class="h2 font-weight-bold">95<sup class="small">%</sup></div>
-							</div>
+			<div class="row pf-stack-groups">
+				<div class="col-md-6 col-lg-3 mb-4 pf-stack-group">
+					<div class="pf-stack-card">
+						<div class="pf-stack-category">Backend</div>
+						<div class="pf-stack-items">
+							<span class="pf-stack-item">Python</span>
+							<span class="pf-stack-item">Go</span>
+							<span class="pf-stack-item">Django</span>
+							<span class="pf-stack-item">FastAPI</span>
+							<span class="pf-stack-item">Gin</span>
+							<span class="pf-stack-item">REST APIs</span>
 						</div>
-						<!-- END -->
-
-						<!-- Demo info -->
-						<div class="row text-center mt-4">
-							<div class="col-6 border-right">
-								<div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last week</span>
-							</div>
-							<div class="col-6">
-								<div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last month</span>
-							</div>
-						</div>
-						<!-- END -->
 					</div>
 				</div>
 
-				<div class="col-lg-4 mb-4">
-					<div class="bg-white rounded-lg shadow p-4">
-						<h2 class="h5 font-weight-bold text-center mb-4">REST APIs</h2>
-
-						<!-- Progress bar 1 -->
-						<div class="progress mx-auto" data-value='98'>
-							<span class="progress-left">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<span class="progress-right">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-								<div class="h2 font-weight-bold">98<sup class="small">%</sup></div>
-							</div>
+				<div class="col-md-6 col-lg-3 mb-4 pf-stack-group">
+					<div class="pf-stack-card">
+						<div class="pf-stack-category">Frontend</div>
+						<div class="pf-stack-items">
+							<span class="pf-stack-item">React</span>
+							<span class="pf-stack-item">Next.js</span>
+							<span class="pf-stack-item">Vue.js</span>
+							<span class="pf-stack-item">React Native</span>
+							<span class="pf-stack-item">Flutter</span>
+							<span class="pf-stack-item">JavaScript</span>
+							<span class="pf-stack-item">TypeScript</span>
+							<span class="pf-stack-item">HTML / CSS</span>
+							<span class="pf-stack-item">Bootstrap</span>
 						</div>
-						<!-- END -->
-
-						<!-- Demo info -->
-						<div class="row text-center mt-4">
-							<div class="col-6 border-right">
-								<div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last week</span>
-							</div>
-							<div class="col-6">
-								<div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last month</span>
-							</div>
-						</div>
-						<!-- END -->
 					</div>
 				</div>
 
-				<div class="col-lg-4 mb-4">
-					<div class="bg-white rounded-lg shadow p-4">
-						<h2 class="h5 font-weight-bold text-center mb-4">React.js</h2>
-
-						<!-- Progress bar 1 -->
-						<div class="progress mx-auto" data-value='90'>
-							<span class="progress-left">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<span class="progress-right">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-								<div class="h2 font-weight-bold">90<sup class="small">%</sup></div>
-							</div>
+				<div class="col-md-6 col-lg-3 mb-4 pf-stack-group">
+					<div class="pf-stack-card">
+						<div class="pf-stack-category">Database</div>
+						<div class="pf-stack-items">
+							<span class="pf-stack-item">PostgreSQL</span>
+							<span class="pf-stack-item">MySQL</span>
+							<span class="pf-stack-item">MongoDB</span>
 						</div>
-						<!-- END -->
-
-						<!-- Demo info -->
-						<div class="row text-center mt-4">
-							<div class="col-6 border-right">
-								<div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last week</span>
-							</div>
-							<div class="col-6">
-								<div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last month</span>
-							</div>
-						</div>
-						<!-- END -->
 					</div>
 				</div>
 
-				<div class="col-lg-4 mb-4">
-					<div class="bg-white rounded-lg shadow p-4">
-						<h2 class="h5 font-weight-bold text-center mb-4">Photoshop</h2>
-
-						<!-- Progress bar 1 -->
-						<div class="progress mx-auto" data-value='92'>
-							<span class="progress-left">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<span class="progress-right">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-								<div class="h2 font-weight-bold">92<sup class="small">%</sup></div>
-							</div>
+				<div class="col-md-6 col-lg-3 mb-4 pf-stack-group">
+					<div class="pf-stack-card">
+						<div class="pf-stack-category">Design &amp; Tools</div>
+						<div class="pf-stack-items">
+							<span class="pf-stack-item">Figma</span>
+							<span class="pf-stack-item">UI/UX</span>
+							<span class="pf-stack-item">Adobe Photoshop</span>
+							<span class="pf-stack-item">Git</span>
+							<span class="pf-stack-item">GitHub</span>
+							<span class="pf-stack-item">Docker</span>
+							<span class="pf-stack-item">Vercel</span>
 						</div>
-						<!-- END -->
-
-						<!-- Demo info -->
-						<div class="row text-center mt-4">
-							<div class="col-6 border-right">
-								<div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last week</span>
-							</div>
-							<div class="col-6">
-								<div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last month</span>
-							</div>
-						</div>
-						<!-- END -->
-					</div>
-				</div>
-
-				<div class="col-lg-4 mb-4">
-					<div class="bg-white rounded-lg shadow p-4">
-						<h2 class="h5 font-weight-bold text-center mb-4">Python</h2>
-
-						<!-- Progress bar 1 -->
-						<div class="progress mx-auto" data-value='93'>
-							<span class="progress-left">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<span class="progress-right">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-								<div class="h2 font-weight-bold">93<sup class="small">%</sup></div>
-							</div>
-						</div>
-						<!-- END -->
-
-						<!-- Demo info -->
-						<div class="row text-center mt-4">
-							<div class="col-6 border-right">
-								<div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last week</span>
-							</div>
-							<div class="col-6">
-								<div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last month</span>
-							</div>
-						</div>
-						<!-- END -->
-					</div>
-				</div>
-
-				<div class="col-lg-4 mb-4">
-					<div class="bg-white rounded-lg shadow p-4">
-						<h2 class="h5 font-weight-bold text-center mb-4">Django</h2>
-
-						<!-- Progress bar 1 -->
-						<div class="progress mx-auto" data-value='95'>
-							<span class="progress-left">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<span class="progress-right">
-								<span class="progress-bar border-primary"></span>
-							</span>
-							<div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
-								<div class="h2 font-weight-bold">95<sup class="small">%</sup></div>
-							</div>
-						</div>
-						<!-- END -->
-
-						<!-- Demo info -->
-						<div class="row text-center mt-4">
-							<div class="col-6 border-right">
-								<div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last week</span>
-							</div>
-							<div class="col-6">
-								<div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last month</span>
-							</div>
-						</div>
-						<!-- END -->
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="ftco-section" id="services-section">
+	<section class="ftco-section pf-building-section" id="building-section">
 		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-12 heading-section text-center ftco-animate mb-5">
-					<span class="subheading">I am grat at</span>
-					<h2 class="mb-4">We do awesome services for our clients</h2>
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">Currently Building</span>
+					<h2 class="mb-4">What I'm working on</h2>
+					<p>A glimpse into my current projects and explorations.</p>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-md-6 col-lg-3">
-					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-						<div class="icon d-flex align-items-center justify-content-center"><span class="flaticon-3d-design"></span></div>
-						<div class="media-body">
-							<h3 class="heading mb-3">Software Development</h3>
+			<div class="row pf-building-list">
+				<div class="col-md-12">
+					<div class="pf-building-item">
+						<div class="pf-building-header">
+							<div class="pf-building-number">01</div>
+							<div class="pf-building-info">
+								<h3 class="pf-building-title">Portfolio &amp; Personal Brand</h3>
+								<p class="pf-building-desc">Designing and building a premium personal portfolio that reflects my engineering and design capabilities.</p>
+							</div>
+							<div class="pf-building-status">Building</div>
 						</div>
-					</div> 
+						<div class="pf-building-bar"><span class="pf-building-bar-fill" style="width: 75%;"></span></div>
+					</div>
 				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-app-development"></span></div>
-						<div class="media-body">
-							<h3 class="heading mb-3">Full-Stack Development</h3>
+
+				<div class="col-md-12">
+					<div class="pf-building-item">
+						<div class="pf-building-header">
+							<div class="pf-building-number">02</div>
+							<div class="pf-building-info">
+								<h3 class="pf-building-title">Full-Stack E-Commerce Platform</h3>
+								<p class="pf-building-desc">End-to-end e-commerce solution with payment integration, order management, inventory tracking, and RESTful APIs.</p>
+							</div>
+							<div class="pf-building-status">Designing</div>
 						</div>
-					</div> 
+						<div class="pf-building-bar"><span class="pf-building-bar-fill" style="width: 40%;"></span></div>
+					</div>
 				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-web-programming"></span></div>
-						<div class="media-body">
-							<h3 class="heading mb-3">Application Development</h3>
+
+				<div class="col-md-12">
+					<div class="pf-building-item">
+						<div class="pf-building-header">
+							<div class="pf-building-number">03</div>
+							<div class="pf-building-info">
+								<h3 class="pf-building-title">AI Engineering &amp; RAG Systems</h3>
+								<p class="pf-building-desc">Exploring prompt workflow optimization, RAG implementation, and AI-assisted development tools.</p>
+							</div>
+							<div class="pf-building-status">Exploring</div>
 						</div>
-					</div> 
+						<div class="pf-building-bar"><span class="pf-building-bar-fill" style="width: 25%;"></span></div>
+					</div>
 				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-branding"></span></div>
-						<div class="media-body">
-							<h3 class="heading mb-3">Web Development</h3>
-						</div>
-					</div> 
+			</div>
+		</div>
+	</section>
+
+	<section class="ftco-section pf-process-section" id="process-section">
+		<div class="container">
+			<div class="row justify-content-center pb-5">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">How I Work</span>
+					<h2 class="mb-4">From idea to production</h2>
+					<p>A clear, repeatable process for designing and building digital products.</p>
 				</div>
 			</div>
 
-			<div class="row">
-				<div class="col-md-6 col-lg-3">
-					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-computer"></span></div>
-						<div class="media-body">
-							<h3 class="heading mb-3">Database Development</h3>
+			<div class="row pf-process-steps">
+				<div class="col-md-12">
+					<div class="pf-process-track">
+						<div class="pf-process-line"></div>
+
+						<div class="row pf-process-step">
+							<div class="col-md-2 col-6 pf-step-item text-center">
+								<div class="pf-step-number">01</div>
+								<h4 class="pf-step-title">Discover</h4>
+								<p class="pf-step-desc">Understand the problem, users and requirements.</p>
+							</div>
+							<div class="col-md-2 col-6 pf-step-item text-center">
+								<div class="pf-step-number">02</div>
+								<h4 class="pf-step-title">Design</h4>
+								<p class="pf-step-desc">Map the experience, flows and interface.</p>
+							</div>
+							<div class="col-md-2 col-6 pf-step-item text-center">
+								<div class="pf-step-number">03</div>
+								<h4 class="pf-step-title">Build</h4>
+								<p class="pf-step-desc">Develop using appropriate architecture and technology.</p>
+							</div>
+							<div class="col-md-2 col-6 pf-step-item text-center">
+								<div class="pf-step-number">04</div>
+								<h4 class="pf-step-title">Test</h4>
+								<p class="pf-step-desc">Validate functionality, UX and quality.</p>
+							</div>
+							<div class="col-md-2 col-6 pf-step-item text-center">
+								<div class="pf-step-number">05</div>
+								<h4 class="pf-step-title">Ship</h4>
+								<p class="pf-step-desc">Deploy, monitor and iterate.</p>
+							</div>
 						</div>
-					</div> 
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-vector"></span></div>
-						<div class="media-body">
-							<h3 class="heading mb-3">Video Editing</h3>
-						</div>
-					</div> 
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-vector"></span></div>
-						<div class="media-body">
-							<h3 class="heading mb-3">Graphic Design</h3>
-						</div>
-					</div> 
-				</div>
-				<div class="col-md-6 col-lg-3">
-					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-zoom"></span></div>
-						<div class="media-body">
-							<h3 class="heading mb-3">Figma</h3>
-						</div>
-					</div> 
+					</div>
 				</div>
 			</div>
 		</div>
@@ -484,11 +826,11 @@
 				<div class="col-md-8 col-lg-8 d-flex align-items-center">
 					<div class="w-100 py-4">
 						<h2>Have a project on your mind.</h2>
-						<p class="mb-0"><a href="#contact" class="btn btn-white py-3 px-4">Contact me</a></p>
+						<p class="mb-0"><a href="#contact-section" class="btn btn-white py-3 px-4">Contact me</a></p>
 					</div>
 				</div>
 				<div class="col-md-4 col-lg-4 d-flex align-items-end">
-					<img src="images/author.png" class="img-fluid" alt="">
+					<img src="image/abel.jpg" class="img-fluid" alt="Abel Alemayehu">
 				</div>
 			</div>
 		</div>
@@ -497,8 +839,9 @@
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
-					<span class="subheading" id="contact">Contact us</span>
-					<h2 class="mb-4">Have a Project?</h2>
+					<span class="subheading" id="contact">Get in touch</span>
+					<h2 class="mb-4">Have an idea?</h2>
+					<p>Let's build something useful.</p>
 				</div>
 			</div>
 
@@ -508,22 +851,33 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Your Name">
+									<label for="name" class="sr-only">Name</label>
+									<input type="text" id="name" class="form-control" placeholder="Your Name" required>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Your Email">
+									<label for="email" class="sr-only">Email</label>
+									<input type="email" id="email" class="form-control" placeholder="Your Email" required>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="text" class="form-control" placeholder="Subject">
+									<label for="project-type" class="sr-only">Project Type</label>
+									<select id="project-type" class="form-control" required>
+										<option value="" disabled selected>Project Type</option>
+										<option value="web">Web Application</option>
+										<option value="mobile">Mobile App</option>
+										<option value="design">UI/UX Design</option>
+										<option value="api">API / Backend</option>
+										<option value="other">Other</option>
+									</select>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+									<label for="message" class="sr-only">Message</label>
+									<textarea id="message" name="" cols="30" rows="7" class="form-control" placeholder="Tell me about your project" required></textarea>
 								</div>
 							</div>
 							<div class="col-md-12">
@@ -531,7 +885,7 @@
 									<a href="https://mail.google.com/mail/?view=cm&fs=1&to=ordialex1226@gmail.com" 
 									target="_blank" 
 									class="btn btn-primary py-3 px-5">
-									Send Message
+									Send Message <i class="fa fa-arrow-right ml-2"></i>
 									</a>
 								</div>
 							</div>
@@ -547,7 +901,7 @@
 								<span class="fa fa-map-marker"></span>
 							</div>
 							<div class="text">
-								<p><span>Address:</span> Ethiopia, Addis Ababa</p>
+								<p><span>Location:</span> Addis Ababa, Ethiopia</p>
 							</div>
 						</div>
 						<div class="dbox w-100 d-flex">
@@ -555,7 +909,7 @@
 								<span class="fa fa-phone"></span>
 							</div>
 							<div class="text">
-								<p><span>Phone:</span> <a href="tel://1234567920">+251-965-655-184</a></p>
+								<p><span>Phone:</span> <a href="tel:+251965655184">+251-965-655-184</a></p>
 							</div>
 						</div>
 						<div class="dbox w-100 d-flex">
@@ -563,7 +917,7 @@
 								<span class="fa fa-paper-plane"></span>
 							</div>
 							<div class="text">
-								<p><span>Email:</span> <a href="mailto:info@yoursite.com">ordialex1226@gmail.com</a></p>
+								<p><span>Email:</span> <a href="mailto:ordialex1226@gmail.com">ordialex1226@gmail.com</a></p>
 							</div>
 						</div>
 						<div class="dbox w-100 d-flex">
@@ -571,7 +925,15 @@
 								<span class="fa fa-globe"></span>
 							</div>
 							<div class="text">
-								<p><span>LinkedIN</span> <a href="#">https://www.linkedin.com/in/abel-alemayehu1994</a></p>
+								<p><span>LinkedIn</span> <a href="https://www.linkedin.com/in/abel-alemayehu1994" target="_blank" rel="noopener">abel-alemayehu1994</a></p>
+							</div>
+						</div>
+						<div class="dbox w-100 d-flex">
+							<div class="icon d-flex align-items-center justify-content-center">
+								<span class="fa fa-github"></span>
+							</div>
+							<div class="text">
+								<p><span>GitHub</span> <a href="https://github.com/Zeordi" target="_blank" rel="noopener">Zeordi</a></p>
 							</div>
 						</div>
 					</div>
@@ -580,69 +942,51 @@
 			</div>
 		</div>
 	</section>
-	
+
+	<section class="pf-final-cta">
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col-md-8">
+					<h2 class="pf-final-cta-heading">Have an idea?</h2>
+					<p class="pf-final-cta-text">Let's build something useful.</p>
+					<div class="pf-final-cta-buttons">
+						<a href="#contact-section" class="pf-final-cta-btn">Let's Talk <i class="fa fa-arrow-right ml-2"></i></a>
+						<a href="#selected-work" class="pf-final-cta-secondary">View My Work</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<footer class="ftco-footer ftco-section">
 		<div class="container">
-			<div class="row mb-5">
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Lets talk about</h2>
-						<p><a href="#" class="btn btn-primary">Learn more</a></p>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4 ml-md-4">
-						<h2 class="ftco-heading-2">Links</h2>
-						<ul class="list-unstyled">
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Home</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Projects</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Services</h2>
-						<ul class="list-unstyled">
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Web Design</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Web Development</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Business Strategy</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Data Analysis</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Graphic Design</a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md">
-					<div class="ftco-footer-widget mb-4">
-						<h2 class="ftco-heading-2">Have a Questions?</h2>
-						<div class="block-23 mb-3">
-							<ul>
-								<li><span class="icon fa fa-map marker"></span><span class="text"> Addis, Ethiopia</span></li>
-								<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+251-965-655-184</span></a></li>
-								<li><a href="#"><span class="icon fa fa-paper-plane pr-4"></span><span class="text">ordialex1226@gmail.com</span></a></li>
-							</ul>
-						</div>
-						<ul class="ftco-footer-social list-unstyled mt-2">
-							<li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="#"><span class="fa fa-instagram"></span></a></li>
-						</ul>
+			<div class="row mb-4">
+				<div class="col-md-12 text-center">
+					<h2 class="ftco-heading-2 pf-footer-name">Abel Alemayehu</h2>
+					<p class="pf-footer-title">Software Engineer &amp; Product Builder</p>
+					<p class="pf-footer-location">Addis Ababa, Ethiopia</p>
+					<ul class="list-unstyled pf-footer-links mb-3" id="pf-footer-links">
+						<li><a href="mailto:ordialex1226@gmail.com">ordialex1226@gmail.com</a></li>
+						<li><a href="tel:+251965655184">+251-965-655-184</a></li>
+						<li><a href="https://www.linkedin.com/in/abel-alemayehu1994" target="_blank" rel="noopener">LinkedIn</a></li>
+						<li><a href="https://github.com/Zeordi" target="_blank" rel="noopener">GitHub</a></li>
+					</ul>
+					<div class="pf-footer-nav">
+						<a href="#about-section" class="pf-footer-nav-link">About</a>
+						<a href="#experience-section" class="pf-footer-nav-link">Experience</a>
+						<a href="#selected-work" class="pf-footer-nav-link">Work</a>
+						<a href="#skills-section" class="pf-footer-nav-link">Stack</a>
+						<a href="#contact-section" class="pf-footer-nav-link">Contact</a>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12 text-center">
-
-					<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Abel Alemayehu <i class="fa fa-heart" aria-hidden="true"></i></a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-					</div>
+					<p class="pf-footer-copyright">Designed &amp; built by Abel Alemayehu. <script>document.write(new Date().getFullYear());</script></p>
 				</div>
 			</div>
-		</footer>
+		</div>
+	</footer>
 		
 		
 
