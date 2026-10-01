@@ -9765,3 +9765,19 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+.owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: auto !important;
+  touch-action: auto !important;
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}
+
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto !important;
+  height: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
