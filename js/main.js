@@ -300,6 +300,24 @@
 	};
 	buildingReveal();
 
+	var experienceReveal = function() {
+		$('.pf-experience-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	experienceReveal();
+
+	var educationReveal = function() {
+		$('.pf-education-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	educationReveal();
+
 	var generalReveal = function() {
 		$('.heading-section, .pf-stack-card, .pf-capability-card, .pf-building-item').waypoint( function( direction ) {
 			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
