@@ -264,6 +264,24 @@
 	};
 	projectReveal();
 
+	var capabilityReveal = function() {
+		$('.pf-capability-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	capabilityReveal();
+
+	var processReveal = function() {
+		$('.pf-step-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	processReveal();
+
 	// magnific popup
 	$('.image-popup').magnificPopup({
     type: 'image',
