@@ -11543,3 +11543,424 @@ a {
     transition: none !important;
   }
 }
+
+/* ============================================
+   GLOBAL MOTION SYSTEM
+   ============================================ */
+
+:root {
+  --pf-motion-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --pf-motion-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --pf-motion-slow: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  --pf-motion-spring: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================
+   SCROLL REVEAL BASE
+   ============================================ */
+
+.reveal {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(28px);
+  transition: opacity var(--pf-motion-medium), transform var(--pf-motion-medium), visibility var(--pf-motion-medium);
+  will-change: transform, opacity;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.05s; }
+.reveal-delay-2 { transition-delay: 0.1s; }
+.reveal-delay-3 { transition-delay: 0.15s; }
+.reveal-delay-4 { transition-delay: 0.2s; }
+
+/* Apply reveal to major sections */
+.heading-section,
+.ftco-animate,
+.pf-project-item,
+.pf-capability-item,
+.pf-step-item,
+.pf-stack-group,
+.pf-building-item {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(28px);
+  transition: opacity var(--pf-motion-medium), transform var(--pf-motion-medium), visibility var(--pf-motion-medium);
+  will-change: transform, opacity;
+}
+
+.heading-section.is-visible,
+.ftco-animate.is-visible,
+.pf-project-item.is-visible,
+.pf-capability-item.is-visible,
+.pf-step-item.is-visible,
+.pf-stack-group.is-visible,
+.pf-building-item.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ============================================
+   HERO FLOATING MOTION
+   ============================================ */
+
+.hero-visual-wrap {
+  animation: heroFloat 10s ease-in-out infinite;
+}
+
+.hero-card-1 {
+  animation: heroFloat 12s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.hero-card-2 {
+  animation: heroFloat 14s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-8px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  75% {
+    transform: translateY(-11px);
+  }
+}
+
+/* ============================================
+   BUTTON MICRO-INTERACTIONS
+   ============================================ */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all var(--pf-motion-fast);
+  transform: translateY(0);
+  box-shadow: var(--pf-shadow-sm);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--pf-shadow);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: var(--pf-shadow-sm);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--pf-accent-subtle), var(--pf-shadow);
+}
+
+.btn-primary {
+  transition: all var(--pf-motion-fast);
+}
+
+.btn-primary:hover {
+  background: var(--pf-accent-hover);
+  border-color: var(--pf-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--pf-shadow);
+}
+
+.btn-outline-primary:hover {
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   CUSTOM CURSOR — DESKTOP ONLY
+   ============================================ */
+
+@media (hover: hover) and (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
+
+  .pf-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--pf-accent);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: width var(--pf-motion-fast), height var(--pf-motion-fast), background var(--pf-motion-fast), border-color var(--pf-motion-fast);
+    mix-blend-mode: difference;
+  }
+
+  .pf-cursor--view {
+    width: 60px;
+    height: 60px;
+    background: var(--pf-accent);
+    border-color: var(--pf-accent);
+    mix-blend-mode: normal;
+  }
+
+  .pf-cursor--view::after {
+    content: 'VIEW';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+
+  .pf-cursor--link {
+    width: 40px;
+    height: 40px;
+    border-color: var(--pf-accent);
+  }
+
+  .pf-cursor--link::after {
+    content: '↗';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: var(--pf-accent);
+  }
+
+  a, button, .btn, .pf-project-card, .pf-capability-card {
+    cursor: none !important;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .pf-cursor {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+
+[data-theme="dark"] {
+  --pf-bg: #0f0f11;
+  --pf-bg-alt: #1a1a1d;
+  --pf-text: #e4e4e7;
+  --pf-text-muted: #a1a1a6;
+  --pf-text-light: #8b8b90;
+  --pf-dark: #ffffff;
+  --pf-dark-2: #1a1a1d;
+  --pf-border: #27272a;
+  --pf-shadow-sm: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.4);
+  --pf-shadow: 0 4px 12px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.3);
+  --pf-shadow-lg: 0 12px 32px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.4);
+  --pf-accent-subtle: rgba(177, 180, 147, 0.2);
+}
+
+[data-theme="dark"] body {
+  background-color: var(--pf-bg);
+  color: var(--pf-text);
+}
+
+[data-theme="dark"] .ftco-navbar-light.scrolled {
+  background: rgba(15,15,17,0.92) !important;
+  border-bottom: 1px solid var(--pf-border);
+}
+
+[data-theme="dark"] .heading-section h2 {
+  color: var(--pf-dark);
+}
+
+[data-theme="dark"] .pf-card,
+[data-theme="dark"] .pf-stack-card,
+[data-theme="dark"] .pf-capability-card,
+[data-theme="dark"] .pf-building-item,
+[data-theme="dark"] .services {
+  background: var(--pf-bg-alt);
+  border-color: var(--pf-border);
+}
+
+[data-theme="dark"] .pf-project-card {
+  background: var(--pf-bg-alt);
+  border-color: var(--pf-border);
+}
+
+[data-theme="dark"] .pf-project-card__content {
+  background: linear-gradient(180deg, rgba(15,15,17,0) 0%, rgba(15,15,17,0.98) 30%, var(--pf-bg-alt) 100%);
+}
+
+[data-theme="dark"] .pf-project-card:hover .pf-project-card__content,
+[data-theme="dark"] .pf-project-card:focus .pf-project-card__content {
+  background: linear-gradient(180deg, rgba(15,15,17,0) 0%, rgba(15,15,17,0.98) 30%, var(--pf-bg-alt) 100%);
+}
+
+[data-theme="dark"] .pf-stack-item {
+  background: var(--pf-bg);
+  border-color: var(--pf-border);
+  color: var(--pf-text);
+}
+
+[data-theme="dark"] .pf-stack-item:hover {
+  background: var(--pf-accent);
+  color: #fff;
+}
+
+[data-theme="dark"] .hero-float-card {
+  background: rgba(26,26,29,0.96);
+  color: var(--pf-text);
+}
+
+[data-theme="dark"] .hero-float-card .card-value {
+  color: var(--pf-text);
+}
+
+[data-theme="dark"] .ftco-counter .text .number {
+  color: var(--pf-dark);
+}
+
+[data-theme="dark"] .ftco-hireme {
+  background: var(--pf-bg-alt);
+}
+
+[data-theme="dark"] .ftco-footer {
+  background: var(--pf-bg) !important;
+}
+
+[data-theme="dark"] .ftco-footer .ftco-footer-widget h2 {
+  color: var(--pf-dark);
+}
+
+[data-theme="dark"] .ftco-footer .ftco-footer-widget ul li a {
+  color: var(--pf-text-muted);
+}
+
+[data-theme="dark"] .ftco-footer .ftco-footer-widget ul li a:hover {
+  color: var(--pf-accent);
+}
+
+[data-theme="dark"] .contact-form {
+  background: var(--pf-bg-alt) !important;
+}
+
+[data-theme="dark"] .form-control {
+  background: var(--pf-bg);
+  border-color: var(--pf-border);
+  color: var(--pf-text);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: var(--pf-text-muted);
+}
+
+[data-theme="dark"] .dbox .text p {
+  color: var(--pf-text-muted);
+}
+
+[data-theme="dark"] .dbox .text p span {
+  color: var(--pf-text);
+}
+
+[data-theme="dark"] .tech-strip {
+  background: var(--pf-bg);
+  border-top-color: var(--pf-border);
+  border-bottom-color: var(--pf-border);
+}
+
+[data-theme="dark"] .tech-marquee__item {
+  color: var(--pf-text-muted);
+}
+
+[data-theme="dark"] .tech-marquee__item:hover {
+  color: var(--pf-accent);
+}
+
+/* Theme toggle */
+.pf-theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid var(--pf-border);
+  color: var(--pf-text);
+  font-size: 14px;
+  transition: all var(--pf-motion-fast);
+  cursor: pointer;
+}
+
+.pf-theme-toggle:hover {
+  background: var(--pf-accent-subtle);
+  border-color: var(--pf-accent);
+  color: var(--pf-accent);
+  transform: translateY(-1px);
+}
+
+/* ============================================
+   SCROLL PROGRESS INDICATOR
+   ============================================ */
+
+.pf-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: var(--pf-accent);
+  z-index: 10001;
+  width: 0%;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* ============================================
+   REDUCED MOTION — GLOBAL
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal,
+  .heading-section,
+  .ftco-animate,
+  .pf-project-item,
+  .pf-capability-item,
+  .pf-step-item,
+  .pf-stack-group,
+  .pf-building-item {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .hero-visual-wrap,
+  .hero-card-1,
+  .hero-card-2 {
+    animation: none;
+  }
+
+  .pf-cursor {
+    display: none !important;
+  }
+}

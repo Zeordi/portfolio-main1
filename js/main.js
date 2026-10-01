@@ -300,6 +300,117 @@
 	};
 	buildingReveal();
 
+	var generalReveal = function() {
+		$('.heading-section, .pf-stack-card, .pf-capability-card, .pf-building-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '90%' } );
+	};
+	generalReveal();
+
+	// Scroll progress indicator
+	var scrollProgress = function() {
+		var $progress = $('#scroll-progress');
+		if (!$progress.length) return;
+
+		$(window).on('scroll', function() {
+			var scrollTop = $(window).scrollTop();
+			var docHeight = $(document).height() - $(window).height();
+			var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+			$progress.css('width', progress + '%');
+		});
+	};
+	scrollProgress();
+
+	// Theme toggle
+	var themeToggle = function() {
+		var $toggle = $('#theme-toggle');
+		var $icon = $toggle.find('.pf-theme-icon');
+		var $html = $('html');
+		var storageKey = 'pf-theme';
+
+		function getSystemTheme() {
+			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		}
+
+		function getStoredTheme() {
+			return localStorage.getItem(storageKey);
+		}
+
+		function applyTheme(theme) {
+			$html.attr('data-theme', theme);
+			$icon.text(theme === 'dark' ? '☾' : '☀');
+			localStorage.setItem(storageKey, theme);
+		}
+
+		// Initialize theme
+		var stored = getStoredTheme();
+		if (stored) {
+			applyTheme(stored);
+		} else {
+			applyTheme(getSystemTheme());
+		}
+
+		// Listen for system theme changes
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+			if (!getStoredTheme()) {
+				applyTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+
+		// Toggle on click
+		$toggle.on('click', function() {
+			var current = $html.attr('data-theme');
+			var next = current === 'dark' ? 'light' : 'dark';
+			applyTheme(next);
+		});
+	};
+	themeToggle();
+
+	// Custom cursor — desktop only
+	var customCursor = function() {
+		if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+		var $cursor = $('#cursor');
+		if (!$cursor.length) return;
+
+		var mouseX = 0, mouseY = 0;
+		var cursorX = 0, cursorY = 0;
+
+		$(document).on('mousemove', function(e) {
+			mouseX = e.clientX;
+			mouseY = e.clientY;
+		});
+
+		function animateCursor() {
+			cursorX += (mouseX - cursorX) * 0.2;
+			cursorY += (mouseY - cursorY) * 0.2;
+			$cursor.css({
+				left: cursorX + 'px',
+				top: cursorY + 'px'
+			});
+			requestAnimationFrame(animateCursor);
+		}
+		animateCursor();
+
+		// Cursor states
+		$('a, button, .btn, .pf-project-card, .pf-capability-card').on('mouseenter', function() {
+			var $el = $(this);
+			if ($el.closest('.pf-project-card').length) {
+				$cursor.addClass('pf-cursor--view');
+				$cursor.removeClass('pf-cursor--link');
+			} else {
+				$cursor.addClass('pf-cursor--link');
+				$cursor.removeClass('pf-cursor--view');
+			}
+		}).on('mouseleave', function() {
+			$cursor.removeClass('pf-cursor--view pf-cursor--link');
+		});
+	};
+	customCursor();
+
 	// magnific popup
 	$('.image-popup').magnificPopup({
     type: 'image',
