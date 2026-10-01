@@ -255,6 +255,15 @@
 	};
 	contentWayPoint();
 
+	var projectReveal = function() {
+		$('.pf-project-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	projectReveal();
+
 	// magnific popup
 	$('.image-popup').magnificPopup({
     type: 'image',
