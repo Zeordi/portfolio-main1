@@ -282,6 +282,24 @@
 	};
 	processReveal();
 
+	var stackReveal = function() {
+		$('.pf-stack-group').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	stackReveal();
+
+	var buildingReveal = function() {
+		$('.pf-building-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	buildingReveal();
+
 	// magnific popup
 	$('.image-popup').magnificPopup({
     type: 'image',
