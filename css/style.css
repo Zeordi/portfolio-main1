@@ -10831,6 +10831,26 @@ a {
   transition-delay: 0.3s;
 }
 
+.pf-project-item:nth-child(5) {
+  transition-delay: 0.4s;
+}
+
+.pf-project-item:nth-child(6) {
+  transition-delay: 0.5s;
+}
+
+.pf-project-item:nth-child(7) {
+  transition-delay: 0.4s;
+}
+
+.pf-project-item:nth-child(8) {
+  transition-delay: 0.3s;
+}
+
+.pf-project-item:nth-child(9) {
+  transition-delay: 0.2s;
+}
+
 .pf-project-card {
   display: block;
   position: relative;
@@ -11871,6 +11891,18 @@ a {
   color: var(--pf-accent);
 }
 
+[data-theme="dark"] .pf-footer-nav-link {
+  color: rgba(255,255,255,0.5);
+}
+
+[data-theme="dark"] .pf-footer-nav-link:hover {
+  color: var(--pf-accent);
+}
+
+[data-theme="dark"] .pf-footer-copyright {
+  color: rgba(255,255,255,0.35);
+}
+
 [data-theme="dark"] .contact-form {
   background: var(--pf-bg-alt) !important;
 }
@@ -12009,6 +12041,13 @@ a {
   margin-bottom: 1.75rem;
 }
 
+.pf-final-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 .pf-final-cta-btn {
   padding: 0.85rem 2rem;
   font-size: 15px;
@@ -12031,6 +12070,24 @@ a {
 .pf-final-cta-btn:focus {
   outline: none;
   box-shadow: 0 0 0 3px var(--pf-accent-subtle), var(--pf-shadow);
+}
+
+.pf-final-cta-secondary {
+  padding: 0.85rem 2rem;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--pf-radius);
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.95);
+  transition: all var(--pf-motion-fast);
+}
+
+.pf-final-cta-secondary:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: var(--pf-accent);
+  color: #fff;
+  transform: translateY(-2px);
 }
 
 @media (max-width: 767.98px) {
@@ -12085,6 +12142,27 @@ a {
 }
 
 .pf-footer-links a:hover {
+  color: var(--pf-accent);
+}
+
+.pf-footer-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.pf-footer-nav-link {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  transition: color var(--pf-motion-fast);
+}
+
+.pf-footer-nav-link:hover {
   color: var(--pf-accent);
 }
 

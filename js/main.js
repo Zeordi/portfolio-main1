@@ -2,6 +2,33 @@
 
 	"use strict";
 
+	// Centralized social/contact links configuration
+	// To add a new link, simply add a new entry here.
+	window.PF_SOCIAL_LINKS = {
+		email: {
+			label: 'ordialex1226@gmail.com',
+			href: 'mailto:ordialex1226@gmail.com',
+			icon: 'fa fa-paper-plane'
+		},
+		phone: {
+			label: '+251-965-655-184',
+			href: 'tel:+251965655184',
+			icon: 'fa fa-phone'
+		},
+		linkedin: {
+			label: 'LinkedIn',
+			href: 'https://www.linkedin.com/in/abel-alemayehu1994',
+			icon: 'fa fa-linkedin',
+			target: '_blank'
+		},
+		github: {
+			label: 'GitHub',
+			href: 'https://github.com/Zeordi',
+			icon: 'fa fa-github',
+			target: '_blank'
+		}
+	};
+
 	$(window).stellar({
     responsive: true,
     parallaxBackgrounds: true,
@@ -31,6 +58,23 @@
 		}, 1);
 	};
 	loader();
+
+	// Dynamic social links rendering from centralized config
+	var renderSocialLinks = function() {
+		if (!window.PF_SOCIAL_LINKS || $('#pf-footer-links').length === 0) return;
+		var $list = $('#pf-footer-links');
+		$list.empty();
+		$.each(window.PF_SOCIAL_LINKS, function(key, link) {
+			var $li = $('<li>');
+			var $a = $('<a>').attr('href', link.href).text(link.label);
+			if (link.target) {
+				$a.attr('target', link.target).attr('rel', 'noopener');
+			}
+			$li.append($a);
+			$list.append($li);
+		});
+	};
+	renderSocialLinks();
 
 	// Scrollax
    $.Scrollax();
