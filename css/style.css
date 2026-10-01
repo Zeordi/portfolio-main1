@@ -9475,6 +9475,26 @@ textarea.form-control {
   .contact-section .contact-form textarea.form-control {
     height: inherit !important; }
 
+  .contact-section .contact-form select.form-control {
+    height: 36px;
+    background: #fff;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    border-radius: 2px;
+    border: 2px solid #b1b493;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+  }
+
+  .contact-section .contact-form select.form-control:focus {
+    border-color: #b1b493 !important;
+  }
+
+  .contact-section .contact-form .form-group {
+    margin-bottom: 1.25rem;
+  }
+
 .dbox {
   width: 100%;
   margin-bottom: 0px; }
@@ -11962,5 +11982,120 @@ a {
 
   .pf-cursor {
     display: none !important;
+  }
+}
+
+/* ============================================
+   FINAL CTA
+   ============================================ */
+
+.pf-final-cta {
+  padding: 5rem 0;
+  background: var(--pf-dark);
+  text-align: center;
+}
+
+.pf-final-cta-heading {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.pf-final-cta-text {
+  font-size: 16px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 1.75rem;
+}
+
+.pf-final-cta-btn {
+  padding: 0.85rem 2rem;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: var(--pf-radius);
+  background: var(--pf-accent);
+  border-color: var(--pf-accent);
+  color: #fff;
+  transition: all var(--pf-motion-fast);
+}
+
+.pf-final-cta-btn:hover {
+  background: var(--pf-accent-hover);
+  border-color: var(--pf-accent-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--pf-shadow);
+}
+
+.pf-final-cta-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--pf-accent-subtle), var(--pf-shadow);
+}
+
+@media (max-width: 767.98px) {
+  .pf-final-cta {
+    padding: 3.5rem 0;
+  }
+
+  .pf-final-cta-heading {
+    font-size: 24px;
+  }
+
+  .pf-final-cta-text {
+    font-size: 15px;
+  }
+}
+
+/* ============================================
+   FOOTER — CLEAN PROFESSIONAL
+   ============================================ */
+
+.pf-footer-name {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.pf-footer-title {
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 0.25rem;
+}
+
+.pf-footer-location {
+  font-size: 13px;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 1rem;
+}
+
+.pf-footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.pf-footer-links a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  transition: color var(--pf-motion-fast);
+}
+
+.pf-footer-links a:hover {
+  color: var(--pf-accent);
+}
+
+.pf-footer-copyright {
+  font-size: 13px;
+  color: rgba(255,255,255,0.35);
+  margin: 0;
+}
+
+@media (max-width: 767.98px) {
+  .pf-footer-links {
+    gap: 0.4rem 1rem;
   }
 }
