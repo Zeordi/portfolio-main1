@@ -12386,7 +12386,7 @@ a {
   transform: translateY(20px);
 }
 
-.pf-experience-card.is-visible {
+.pf-experience-item.is-visible .pf-experience-card {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -12404,7 +12404,7 @@ a {
   transition-delay: 0.3s;
 }
 
-.pf-experience-card:hover {
+.pf-experience-item.is-visible .pf-experience-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--pf-shadow-lg);
   border-color: transparent;
@@ -12495,7 +12495,7 @@ a {
     padding: 1.25rem;
   }
 
-  .pf-experience-card:hover {
+  .pf-experience-item.is-visible .pf-experience-card:hover {
     transform: none;
   }
 }
@@ -12544,7 +12544,7 @@ a {
   transform: translateY(20px);
 }
 
-.pf-education-card.is-visible {
+.pf-education-item.is-visible .pf-education-card {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
@@ -12558,7 +12558,7 @@ a {
   transition-delay: 0.2s;
 }
 
-.pf-education-card:hover {
+.pf-education-item.is-visible .pf-education-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--pf-shadow-lg);
   border-color: transparent;
@@ -12610,7 +12610,7 @@ a {
     padding: 1.25rem;
   }
 
-  .pf-education-card:hover {
+  .pf-education-item.is-visible .pf-education-card:hover {
     transform: none;
   }
 }
