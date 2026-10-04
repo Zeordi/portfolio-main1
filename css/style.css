@@ -10364,30 +10364,22 @@ a {
 
 /* Hero Visual */
 .hero-visual-wrap {
-  height: auto;
-  min-height: 280px;
-  max-height: 480px;
+  position: relative;
+  height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 1rem;
 }
-
 @media (max-width: 991.98px) {
   .hero-visual-wrap {
-    height: auto;
-    min-height: 240px;
-    max-height: 340px;
-    margin-top: 1.5rem;
+    height: 380px;
+    margin-top: 2rem;
   }
 }
-
 @media (max-width: 575.98px) {
   .hero-visual-wrap {
-    height: auto;
-    min-height: 220px;
-    max-height: 300px;
-    margin-top: 1rem;
+    height: 320px;
+    margin-top: 1.5rem;
   }
 }
 
@@ -10403,31 +10395,23 @@ a {
 .hero-img {
   width: 100%;
   height: 100%;
-  max-height: 420px;
-  background-size: contain;
+  max-height: 460px;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   border-radius: var(--pf-radius-lg);
   box-shadow: var(--pf-shadow-lg);
   position: relative;
   z-index: 1;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(30px) scale(0.98);
   animation: heroImageIn 0.9s ease forwards;
   animation-delay: 0.4s;
 }
 
 @media (max-width: 991.98px) {
-  .hero-img {
-    max-height: 300px;
-  }
+  .hero-img { max-height: 340px; }
 }
-
 @media (max-width: 575.98px) {
-  .hero-img {
-    max-height: 220px;
-  }
+  .hero-img { max-height: 260px; }
 }
 
 .hero-float-card {
@@ -12690,5 +12674,42 @@ a {
 
   .pf-education-item.is-visible .pf-education-card:hover {
     transform: none;
+  }
+}
+
+/* ============================================
+   FULL BANNER1 SECTION
+   ============================================ */
+
+.pf-banner-full {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+.pf-banner-full-inner {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.pf-banner-full-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 0;
+}
+
+@media (min-width: 1400px) {
+  .pf-banner-full-inner {
+    max-width: 1320px;
+    padding: 0 1rem;
+  }
+  .pf-banner-full-img {
+    border-radius: var(--pf-radius-lg);
   }
 }
