@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg-justap" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f11;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg-justap)"/>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="800" height="50" fill="#141416"/>
+  <rect x="30" y="15" width="120" height="10" rx="4" fill="#e4e4e7" opacity="0.9"/>
+
+  <!-- Two phone mockups side by side -->
+  <!-- Phone 1: Digital card display -->
+  <rect x="130" y="80" width="220" height="440" rx="32" fill="#1f1f22"/>
+  <rect x="145" y="100" width="190" height="400" rx="20" fill="#141416"/>
+
+  <!-- Phone 1 content: Digital business card -->
+  <rect x="145" y="100" width="190" height="50" rx="0" fill="#b1b493"/>
+  <rect x="160" y="115" width="60" height="6" rx="3" fill="#141416"/>
+  <rect x="160" y="125" width="40" height="4" rx="2" fill="#141416"/>
+
+  <!-- Digital card body -->
+  <rect x="175" y="150" width="160" height="160" rx="12" fill="#1a1a1d"/>
+  <rect x="195" y="165" width="100" height="10" rx="3" fill="#6b6b70"/>
+  <rect x="195" y="185" width="120" height="10" rx="3" fill="#e4e4e7" opacity="0.9"/>
+  <rect x="195" y="205" width="80" height="8" rx="3" fill="#6b6b70"/>
+  <rect x="195" y="225" width="100" height="8" rx="3" fill="#6b6b70"/>
+  <circle cx="280" cy="260" r="20" fill="#b1b493" opacity="0.3"/>
+  <circle cx="280" cy="260" r="8" fill="#b1b493"/>
+  <rect x="270" y="272" width="20" height="4" rx="2" fill="#b1b493"/>
+  <rect x="260" y="282" width="40" height="4" rx="2" fill="#6b6b70"/>
+
+  <!-- Contact icons on phone -->
+  <rect x="175" y="330" width="160" height="18" rx="4" fill="#1f1f22"/>
+  <rect x="185" y="335" width="12" height="8" rx="2" fill="#b1b493"/>
+  <circle cx="205" cy="340" r="4" fill="#e4e4e7"/>
+  <rect x="220" y="335" width="100" height="8" rx="4" fill="#6b6b70"/>
+
+  <rect x="175" y="358" width="160" height="18" rx="4" fill="#1f1f22"/>
+  <rect x="185" y="363" width="120" height="8" rx="2" fill="#6b6b70"/>
+  <rect x="185" y="373" width="70" height="8" rx="2" fill="#6b6b70"/>
+
+  <rect x="175" y="386" width="160" height="64" rx="6" fill="#1f1f22"/>
+  <rect x="185" y="396" width="120" height="10" rx="3" fill="#e4e4e7" opacity="0.9"/>
+  <rect x="185" y="415" width="100" height="8" rx="3" fill="#6b6b70"/>
+  <rect x="185" y="430" width="90" height="12" rx="4" fill="#b1b493"/>
+
+  <!-- NFC interaction visual -->
+  <rect x="330" y="230" width="140" height="140" rx="50%" fill="#b1b493" opacity="0.1"/>
+  <rect x="340" y="240" width="120" height="120" rx="50%" fill="#b1b493" opacity="0.15"/>
+  <rect x="350" y="250" width="100" height="100" rx="50%" fill="#b1b493" opacity="0.2"/>
+  <rect x="375" y="275" width="50" height="50" rx="50%" fill="#b1b493" opacity="0.3"/>
+
+  <!-- NFC tag icon -->
+  <rect x="370" y="270" width="60" height="60" rx="10" fill="#141416" stroke="#b1b493" stroke-width="2"/>
+  <rect x="385" y="285" width="30" height="4" rx="2" fill="#b1b493" opacity="0.5"/>
+  <circle cx="400" cy="300" r="3" fill="#b1b493"/>
+  <circle cx="400" cy="310" r="3" fill="#b1b493"/>
+
+  <!-- Phone 2: Contact sharing interface -->
+  <rect x="510" y="80" width="180" height="440" rx="28" fill="#1f1f22"/>
+  <rect x="520" y="100" width="160" height="400" rx="18" fill="#141416"/>
+
+  <!-- Phone 2 content: Sharing interface -->
+  <rect x="520" y="100" width="160" height="44" rx="0" fill="#b1b493"/>
+  <rect x="535" y="115" width="50" height="6" rx="3" fill="#141416"/>
+  <rect x="535" y="125" width="35" height="4" rx="2" fill="#141416"/>
+
+  <!-- Sharing animation -->
+  <rect x="540" y="160" width="60" height="8" rx="4" fill="#6b6b70"/>
+  <rect x="540" y="180" width="100" height="8" rx="3" fill="#6b6b70"/>
+  <rect x="540" y="200" width="80" height="8" rx="3" fill="#e4e4e7" opacity="0.9"/>
+
+  <rect x="540" y="220" width="120" height="60" rx="10" fill="#1a1a1d"/>
+  <rect x="555" y="240" width="90" height="8" rx="3" fill="#6b6b70"/>
+  <rect x="555" y="255" width="70" height="10" rx="4" fill="#b1b493" opacity="0.3"/>
+  <rect x="555" y="275" width="90" height="8" rx="3" fill="#6b6b70"/>
+
+  <!-- Profile in phone 2 -->
+  <circle cx="570" cy="290" r="18" fill="#2a2a2e" stroke="#b1b493" stroke-width="2"/>
+  <rect x="555" y="310" width="30" height="8" rx="2" fill="#6b6b70"/>
+  <rect x="555" y="325" width="50" height="8" rx="2" fill="#6b6b70"/>
+
+  <!-- QR code area -->
+  <rect x="540" y="350" width="70" height="70" rx="4" fill="#2a2a2e"/>
+  <rect x="548" y="358" width="8" height="8" fill="#b1b493"/>
+  <rect x="558" y="358" width="8" height="8" fill="#b1b493"/>
+  <rect x="568" y="358" width="8" height="8" fill="#6b6b70"/>
+  <rect x="548" y="568" width="8" height="8" fill="#b1b493"/>
+  <rect x="558" y="368" width="8" height="8" fill="#6b6b70"/>
+  <rect x="568" y="368" width="8" height="8" fill="#b1b493"/>
+
+  <rect x="548" y="378" width="8" height="8" fill="#b1b493"/>
+  <rect x="558" y="378" width="8" height="8" fill="#6b6b70"/>
+  <rect x="568" y="378" width="8" height="8" fill="#b1b493"/>
+
+  <rect x="548" y="388" width="8" height="8" fill="#6b6b70"/>
+  <rect x="558" y="388" width="8" height="8" fill="#b1b493"/>
+  <rect x="568" y="388" width="8" height="8" fill="#b1b493"/>
+
+  <rect x="548" y="398" width="8" height="8" fill="#b1b493"/>
+  <rect x="558" y="398" width="8" height="8" fill="#6b6b70"/>
+  <rect x="568" y="398" width="8" height="8" fill="#b1b493"/>
+
+  <!-- Share button -->
+  <rect x="540" y="435" width="120" height="40" rx="8" fill="#b1b493"/>
+  <rect x="565" y="450" width="70" height="10" rx="3" fill="#141416"/>
+  <rect x="555" y="462" width="90" height="6" rx="3" fill="#141416"/>
+
+  <!-- Bottom: NFC wave animation -->
+  <rect x="540" y="485" width="120" height="4" rx="2" fill="#b1b493" opacity="0.2"/>
+  <rect x="525" y="495" width="150" height="4" rx="2" fill="#b1b493" opacity="0.1"/>
+  <rect x="510" y="505" width="180" height="4" rx="2" fill="#b1b493" opacity="0.05"/>
+</svg>

@@ -2,6 +2,33 @@
 
 	"use strict";
 
+	// Centralized social/contact links configuration
+	// To add a new link, simply add a new entry here.
+	window.PF_SOCIAL_LINKS = {
+		email: {
+			label: 'ordialex1226@gmail.com',
+			href: 'mailto:ordialex1226@gmail.com',
+			icon: 'fa fa-paper-plane'
+		},
+		phone: {
+			label: '+251-965-655-184',
+			href: 'tel:+251965655184',
+			icon: 'fa fa-phone'
+		},
+		linkedin: {
+			label: 'LinkedIn',
+			href: 'https://www.linkedin.com/in/abel-alemayehu1994',
+			icon: 'fa fa-linkedin',
+			target: '_blank'
+		},
+		github: {
+			label: 'GitHub',
+			href: 'https://github.com/Zeordi',
+			icon: 'fa fa-github',
+			target: '_blank'
+		}
+	};
+
 	$(window).stellar({
     responsive: true,
     parallaxBackgrounds: true,
@@ -31,6 +58,23 @@
 		}, 1);
 	};
 	loader();
+
+	// Dynamic social links rendering from centralized config
+	var renderSocialLinks = function() {
+		if (!window.PF_SOCIAL_LINKS || $('#pf-footer-links').length === 0) return;
+		var $list = $('#pf-footer-links');
+		$list.empty();
+		$.each(window.PF_SOCIAL_LINKS, function(key, link) {
+			var $li = $('<li>');
+			var $a = $('<a>').attr('href', link.href).text(link.label);
+			if (link.target) {
+				$a.attr('target', link.target).attr('rel', 'noopener');
+			}
+			$li.append($a);
+			$list.append($li);
+		});
+	};
+	renderSocialLinks();
 
 	// Scrollax
    $.Scrollax();
@@ -254,6 +298,180 @@
 		} , { offset: '95%' } );
 	};
 	contentWayPoint();
+
+	var projectReveal = function() {
+		$('.pf-project-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	projectReveal();
+
+	var capabilityReveal = function() {
+		$('.pf-capability-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	capabilityReveal();
+
+	var processReveal = function() {
+		$('.pf-step-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	processReveal();
+
+	var stackReveal = function() {
+		$('.pf-stack-group').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	stackReveal();
+
+	var buildingReveal = function() {
+		$('.pf-building-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	buildingReveal();
+
+	var experienceReveal = function() {
+		$('.pf-experience-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	experienceReveal();
+
+	var educationReveal = function() {
+		$('.pf-education-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '85%' } );
+	};
+	educationReveal();
+
+	var generalReveal = function() {
+		$('.heading-section, .pf-stack-card, .pf-capability-card, .pf-building-item').waypoint( function( direction ) {
+			if( direction === 'down' && !$(this.element).hasClass('is-visible') ) {
+				$(this.element).addClass('is-visible');
+			}
+		}, { offset: '90%' } );
+	};
+	generalReveal();
+
+	// Scroll progress indicator
+	var scrollProgress = function() {
+		var $progress = $('#scroll-progress');
+		if (!$progress.length) return;
+
+		$(window).on('scroll', function() {
+			var scrollTop = $(window).scrollTop();
+			var docHeight = $(document).height() - $(window).height();
+			var progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+			$progress.css('width', progress + '%');
+		});
+	};
+	scrollProgress();
+
+	// Theme toggle
+	var themeToggle = function() {
+		var $toggle = $('#theme-toggle');
+		var $icon = $toggle.find('.pf-theme-icon');
+		var $html = $('html');
+		var storageKey = 'pf-theme';
+
+		function getSystemTheme() {
+			return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+		}
+
+		function getStoredTheme() {
+			return localStorage.getItem(storageKey);
+		}
+
+		function applyTheme(theme) {
+			$html.attr('data-theme', theme);
+			$icon.text(theme === 'dark' ? '☾' : '☀');
+			localStorage.setItem(storageKey, theme);
+		}
+
+		// Initialize theme
+		var stored = getStoredTheme();
+		if (stored) {
+			applyTheme(stored);
+		} else {
+			applyTheme(getSystemTheme());
+		}
+
+		// Listen for system theme changes
+		window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+			if (!getStoredTheme()) {
+				applyTheme(e.matches ? 'dark' : 'light');
+			}
+		});
+
+		// Toggle on click
+		$toggle.on('click', function() {
+			var current = $html.attr('data-theme');
+			var next = current === 'dark' ? 'light' : 'dark';
+			applyTheme(next);
+		});
+	};
+	themeToggle();
+
+	// Custom cursor — desktop only
+	var customCursor = function() {
+		if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+		var $cursor = $('#cursor');
+		if (!$cursor.length) return;
+
+		var mouseX = 0, mouseY = 0;
+		var cursorX = 0, cursorY = 0;
+
+		$(document).on('mousemove', function(e) {
+			mouseX = e.clientX;
+			mouseY = e.clientY;
+		});
+
+		function animateCursor() {
+			cursorX += (mouseX - cursorX) * 0.2;
+			cursorY += (mouseY - cursorY) * 0.2;
+			$cursor.css({
+				left: cursorX + 'px',
+				top: cursorY + 'px'
+			});
+			requestAnimationFrame(animateCursor);
+		}
+		animateCursor();
+
+		// Cursor states
+		$('a, button, .btn, .pf-project-card, .pf-capability-card').on('mouseenter', function() {
+			var $el = $(this);
+			if ($el.closest('.pf-project-card').length) {
+				$cursor.addClass('pf-cursor--view');
+				$cursor.removeClass('pf-cursor--link');
+			} else {
+				$cursor.addClass('pf-cursor--link');
+				$cursor.removeClass('pf-cursor--view');
+			}
+		}).on('mouseleave', function() {
+			$cursor.removeClass('pf-cursor--view pf-cursor--link');
+		});
+	};
+	customCursor();
 
 	// magnific popup
 	$('.image-popup').magnificPopup({
