@@ -8805,8 +8805,31 @@ h1, h2, h3, h4, h5,
       color: #b1b493; }
       .ftco-about ul.about-info li span:first-child {
         font-weight: 600;
-        color: #000000;
+        color: var(--pf-text);
         width: 130px; }
+
+.pf-about-meta li span:first-child {
+  color: var(--pf-text);
+  font-weight: 600;
+}
+
+.pf-about-meta li span:last-child,
+.pf-about-meta li a {
+  color: var(--pf-text-muted);
+}
+
+.pf-about-meta a:hover {
+  color: var(--pf-accent);
+}
+
+[data-theme="dark"] .pf-about-meta li span:first-child {
+  color: var(--pf-text);
+}
+
+[data-theme="dark"] .pf-about-meta li span:last-child,
+[data-theme="dark"] .pf-about-meta li a {
+  color: var(--pf-text-muted);
+}
 
 .ftco-about .my-interest {
   margin-top: 30px; }
@@ -11951,6 +11974,29 @@ a {
   color: var(--pf-accent);
 }
 
+[data-theme="dark"] .pf-experience-card,
+[data-theme="dark"] .pf-education-card {
+  background: var(--pf-bg-alt);
+  border-color: var(--pf-border);
+  color: var(--pf-text);
+}
+
+[data-theme="dark"] .pf-experience-role,
+[data-theme="dark"] .pf-education-school {
+  color: var(--pf-dark);
+}
+
+[data-theme="dark"] .pf-experience-desc,
+[data-theme="dark"] .pf-education-period {
+  color: var(--pf-text-muted);
+}
+
+[data-theme="dark"] .pf-experience-tags span {
+  background: var(--pf-bg);
+  border-color: var(--pf-border);
+  color: var(--pf-text-muted);
+}
+
 /* Theme toggle */
 .pf-theme-toggle {
   display: inline-flex;
@@ -12114,6 +12160,23 @@ a {
   .pf-final-cta-text {
     font-size: 15px;
   }
+}
+
+[data-theme="dark"] .pf-final-cta {
+  background: var(--pf-bg);
+}
+
+[data-theme="dark"] .pf-final-cta-heading {
+  color: var(--pf-dark);
+}
+
+[data-theme="dark"] .pf-final-cta-text {
+  color: var(--pf-text-muted);
+}
+
+[data-theme="dark"] .pf-final-cta-secondary {
+  border-color: rgba(255,255,255,0.18);
+  color: var(--pf-text);
 }
 
 /* ============================================
@@ -12422,6 +12485,13 @@ a {
   font-size: 13px;
   color: var(--pf-text-muted);
   margin: 0;
+}
+
+.pf-education-desc {
+  font-size: 13px;
+  color: var(--pf-text-muted);
+  margin-top: 0.75rem;
+  line-height: 1.6;
 }
 
 @media (max-width: 767.98px) {
