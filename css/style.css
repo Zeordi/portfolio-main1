@@ -11796,18 +11796,18 @@ a {
    ============================================ */
 
 [data-theme="dark"] {
-  --pf-bg: #0f0f11;
-  --pf-bg-alt: #1a1a1d;
-  --pf-text: #e4e4e7;
-  --pf-text-muted: #a1a1a6;
-  --pf-text-light: #8b8b90;
-  --pf-dark: #ffffff;
-  --pf-dark-2: #1a1a1d;
-  --pf-border: #27272a;
-  --pf-shadow-sm: 0 1px 3px rgba(0,0,0,0.3), 0 1px 2px rgba(0,0,0,0.4);
-  --pf-shadow: 0 4px 12px rgba(0,0,0,0.4), 0 1px 3px rgba(0,0,0,0.3);
-  --pf-shadow-lg: 0 12px 32px rgba(0,0,0,0.5), 0 2px 8px rgba(0,0,0,0.4);
-  --pf-accent-subtle: rgba(177, 180, 147, 0.2);
+  --pf-bg: #0F1419;
+  --pf-bg-alt: #161D26;
+  --pf-text: #E8ECF1;
+  --pf-text-muted: #9BA3AF;
+  --pf-text-light: #7A8494;
+  --pf-dark: #F0F4F8;
+  --pf-dark-2: #161D26;
+  --pf-border: #1E2733;
+  --pf-shadow-sm: 0 1px 3px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.45);
+  --pf-shadow: 0 4px 12px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.35);
+  --pf-shadow-lg: 0 12px 32px rgba(0,0,0,0.55), 0 2px 8px rgba(0,0,0,0.4);
+  --pf-accent-subtle: rgba(177, 180, 147, 0.18);
 }
 
 [data-theme="dark"] body {
@@ -11816,8 +11816,12 @@ a {
 }
 
 [data-theme="dark"] .ftco-navbar-light.scrolled {
-  background: rgba(15,15,17,0.92) !important;
+  background: rgba(15, 20, 25, 0.92) !important;
   border-bottom: 1px solid var(--pf-border);
+}
+
+[data-theme="dark"] .ftco-navbar-light {
+  background: rgba(15, 20, 25, 0.95) !important;
 }
 
 [data-theme="dark"] .heading-section h2 {
@@ -11839,12 +11843,16 @@ a {
 }
 
 [data-theme="dark"] .pf-project-card__content {
-  background: linear-gradient(180deg, rgba(15,15,17,0) 0%, rgba(15,15,17,0.98) 30%, var(--pf-bg-alt) 100%);
+  background: linear-gradient(180deg, rgba(15, 20, 25, 0) 0%, rgba(15, 20, 25, 0.98) 30%, var(--pf-bg-alt) 100%);
 }
 
 [data-theme="dark"] .pf-project-card:hover .pf-project-card__content,
 [data-theme="dark"] .pf-project-card:focus .pf-project-card__content {
-  background: linear-gradient(180deg, rgba(15,15,17,0) 0%, rgba(15,15,17,0.98) 30%, var(--pf-bg-alt) 100%);
+  background: linear-gradient(180deg, rgba(15, 20, 25, 0) 0%, rgba(15, 20, 25, 0.98) 30%, var(--pf-bg-alt) 100%);
+}
+
+[data-theme="dark"] .pf-project-card__overlay {
+  background: linear-gradient(180deg, rgba(15, 20, 25, 0) 40%, rgba(15, 20, 25, 0.75) 100%);
 }
 
 [data-theme="dark"] .pf-stack-item {
@@ -11859,12 +11867,16 @@ a {
 }
 
 [data-theme="dark"] .hero-float-card {
-  background: rgba(26,26,29,0.96);
+  background: rgba(22, 29, 38, 0.96);
   color: var(--pf-text);
 }
 
 [data-theme="dark"] .hero-float-card .card-value {
   color: var(--pf-text);
+}
+
+[data-theme="dark"] .owl-carousel.home-slider .slider-item .overlay {
+  background: linear-gradient(135deg, rgba(15, 20, 25, 0.93) 0%, rgba(15, 20, 25, 0.78) 100%);
 }
 
 [data-theme="dark"] .ftco-counter .text .number {
@@ -11892,7 +11904,7 @@ a {
 }
 
 [data-theme="dark"] .pf-footer-nav-link {
-  color: rgba(255,255,255,0.5);
+  color: var(--pf-text-muted);
 }
 
 [data-theme="dark"] .pf-footer-nav-link:hover {
@@ -11900,7 +11912,7 @@ a {
 }
 
 [data-theme="dark"] .pf-footer-copyright {
-  color: rgba(255,255,255,0.35);
+  color: var(--pf-text-light);
 }
 
 [data-theme="dark"] .contact-form {
