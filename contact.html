@@ -133,11 +133,9 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<a href="https://mail.google.com/mail/?view=cm&fs=1&to=ordialex1226@gmail.com" 
-									target="_blank" 
-									class="btn btn-primary py-3 px-5">
+								<button type="button" id="contact-send" class="btn btn-primary py-3 px-5">
 									Send Message <i class="fa fa-arrow-right ml-2"></i>
-									</a>
+								</button>
 								</div>
 							</div>
 						</div>
@@ -285,6 +283,29 @@
 	<script src="js/google-map.js"></script>
 	
 	<script src="js/main.js"></script>
+	
+	<script>
+	function sendPortfolioContact(e) {
+	  e.preventDefault();
+	  var name = document.getElementById('name').value.trim();
+	  var email = document.getElementById('email').value.trim();
+	  var typeEl = document.getElementById('project-type');
+	  var typeLabel = typeEl.options[typeEl.selectedIndex]?.text || '';
+	  var message = document.getElementById('message').value.trim();
+	  if (!name || !email || !typeEl.value || !message) {
+	    alert('Please fill in all fields.');
+	    return;
+	  }
+	  var subject = 'Portfolio contact – ' + typeLabel + ' – ' + name;
+	  var body = 'Name: ' + name + '\nEmail: ' + email + '\nProject type: ' + typeLabel + '\n\nMessage:\n' + message;
+	  var gmail = 'https://mail.google.com/mail/?view=cm&fs=1'
+	    + '&to=' + encodeURIComponent('ordialex1226@gmail.com')
+	    + '&su=' + encodeURIComponent(subject)
+	    + '&body=' + encodeURIComponent(body);
+	  window.open(gmail, '_blank');
+	}
+	document.getElementById('contact-send').addEventListener('click', sendPortfolioContact);
+	</script>
 	
 	</body>
 	</html>
