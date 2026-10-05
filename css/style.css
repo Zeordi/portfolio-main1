@@ -12813,62 +12813,96 @@ section#home-section.hero,
 
 /* ========== DESKTOP NAV – FORCE LAYOUT (from 768px) ========== */
 @media (min-width: 768px) {
-  .navbar-toggler,
-  .js-fh5co-nav-toggle,
-  .fh5co-nav-toggle,
-  .ftco-navbar-light .navbar-toggler,
-  button.navbar-toggler {
-    display: none !important;
-    visibility: hidden !important;
-    width: 0 !important;
-    height: 0 !important;
-    overflow: hidden !important;
-    pointer-events: none !important;
+  /* Header bar breathing room */
+  #ftco-navbar {
+    padding-top: 0.65rem;
+    padding-bottom: 0.65rem;
   }
 
   #ftco-navbar > .container {
     display: grid !important;
     grid-template-columns: auto 1fr auto;
     align-items: center;
+    column-gap: 1.5rem;
     width: 100%;
+    min-height: 56px;
   }
 
   .navbar-brand {
     grid-column: 1;
-    margin-right: 0;
+    margin: 0;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
   }
 
-  #ftco-nav,
-  #ftco-nav.collapse,
-  #ftco-nav.collapsing,
-  #ftco-nav.show {
-    display: contents !important;
-  }
-
+  /* Center links – real space between items */
   ul.navbar-nav.pf-nav-center {
     grid-column: 2;
     display: flex !important;
     flex-direction: row !important;
     justify-content: center !important;
     align-items: center !important;
+    flex-wrap: nowrap;
     margin: 0 !important;
-    gap: 0.25rem;
+    padding: 0 !important;
+    gap: 0.25rem 1.75rem;   /* vertical | horizontal gap between links */
   }
 
+  ul.navbar-nav.pf-nav-center .nav-item {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  ul.navbar-nav.pf-nav-center .nav-link {
+    padding: 0.4rem 0.15rem !important;
+    margin: 0 !important;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, color 0.2s ease;
+  }
+
+  ul.navbar-nav.pf-nav-center .nav-link:hover,
+  ul.navbar-nav.pf-nav-center .nav-item.active .nav-link {
+    opacity: 1;
+  }
+
+  /* Right actions – clear separation from links and between controls */
   .pf-nav-actions {
     grid-column: 3;
     display: flex !important;
     flex-direction: row !important;
     align-items: center !important;
-    gap: 0.75rem;
+    gap: 0.85rem;
     margin: 0 !important;
+    padding-left: 0.5rem;
   }
 
   .pf-nav-cta {
-    padding: 0.45rem 1.1rem !important;
+    padding: 0.5rem 1.2rem !important;
     font-size: 13px !important;
     font-weight: 600;
     white-space: nowrap;
+    border-radius: var(--pf-radius);
+  }
+
+  .pf-theme-toggle {
+    flex-shrink: 0;
+  }
+}
+
+/* Optional: slightly tighter gaps on medium widths so nothing wraps */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  ul.navbar-nav.pf-nav-center {
+    gap: 0.15rem 1.1rem;
+  }
+  ul.navbar-nav.pf-nav-center .nav-link {
+    font-size: 13px;
+  }
+  .pf-nav-actions {
+    gap: 0.6rem;
   }
 }
 
