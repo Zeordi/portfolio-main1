@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# OS / editor
+.DS_Store
+*.log
+
+# Deploy outputs (we deploy static files directly; no vercel.json)
+.vercel/
+.netlify/
+
+# Build cache
+.scss-cache/

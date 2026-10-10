@@ -1,0 +1,556 @@
+/* pf-v2.css — Portfolio v2 design system (tokens, dark mode, hero, cards, focus rings)
+   Author: build for Abel Alemayehu. MIT.
+   This file is loaded last and overrides/extends css/style.css without deleting it. */
+
+/* ============================================================
+   Design tokens (CSS custom properties)
+   ============================================================ */
+:root {
+	--pf-accent: #F96D00;
+	--pf-accent-soft: #F96D0022;
+	--pf-bg: #0B0F14;
+	--pf-bg-card: #141A24;
+	--pf-bg-card-alt: #1C2330;
+	--pf-text: #E6E9F0;
+	--pf-text-muted: #A8B0C0;
+	--pf-border: #2A3447;
+	--pf-border-soft: #2A344788;
+	--pf-nav-bg: rgba(11, 15, 20, 0.72);
+	--pf-radius: 14px;
+	--pf-radius-card: 18px;
+	--pf-transition: 0.2s ease;
+	--pf-font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+	--pf-font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, 'Courier New', monospace;
+	color-scheme: dark;
+}
+
+/* Light theme */
+:root[data-theme="light"], html[data-theme="light"] {
+	--pf-bg: #FFFFFF;
+	--pf-bg-card: #F7F8FA;
+	--pf-bg-card-alt: #EEF0F3;
+	--pf-text: #1F2430;
+	--pf-text-muted: #6B7280;
+	--pf-border: #DDE1E8;
+	--pf-border-soft: #DDE1E888;
+	--pf-nav-bg: rgba(255, 255, 255, 0.82);
+	--pf-accent: #F96D00;
+	color-scheme: light;
+}
+
+/* Reduced motion prefers */
+@media (prefers-reduced-motion: reduce) {
+	:root { --pf-transition: 0s; }
+	* { scroll-behavior: auto !important; }
+}
+
+/* ============================================================
+   Base resets + typography
+   ============================================================ */
+html {
+	scroll-padding-top: 80px;
+	scroll-behavior: smooth;
+}
+html[data-theme="dark"] body, .ftco-navbar-light {
+	background: var(--pf-bg);
+	color: var(--pf-text);
+}
+body {
+	font-family: var(--pf-font-sans);
+	background: var(--pf-bg);
+	color: var(--pf-text);
+}
+p, li, label { color: inherit; }
+a, .btn {
+	font-family: var(--pf-font-sans);
+}
+
+/* Headings */
+h1, h2, h3, h4 { color: var(--pf-text); }
+
+/* ============================================================
+   Skip link (accessibility)
+   ============================================================ */
+.pf-skip-link {
+	position: absolute;
+	top: -40px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1000;
+	background: var(--pf-accent);
+	color: #fff;
+	padding: 8px 16px;
+	border-radius: 6px;
+	font-size: 13px;
+	font-weight: 600;
+	text-decoration: none;
+	transition: top 180ms ease;
+}
+.pf-skip-link:focus {
+	top: 12px;
+	outline: 2px solid #fff;
+	outline-offset: 2px;
+}
+
+/* ============================================================
+   Scroll progress + theme toggle
+   ============================================================ */
+#scroll-progress {
+	position: fixed;
+	top: 0; left: 0;
+	height: 3px;
+	background: var(--pf-accent);
+	width: 0%;
+	z-index: 1100;
+	transform-origin: 0 50%;
+	transition: width 0.05s linear;
+}
+.pf-theme-toggle {
+	background: var(--pf-bg-card);
+	border: 1px solid var(--pf-border);
+	color: var(--pf-text);
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.pf-theme-toggle:focus-visible {
+	outline: 2px solid var(--pf-accent);
+	outline-offset: 2px;
+}
+.pf-nav-cta { background: var(--pf-accent); border-color: var(--pf-accent); }
+.pf-nav-actions { gap: 6px; align-items: center; }
+
+/* ============================================================
+   Navbar glass
+   ============================================================ */
+.site-navbar-target {
+	background: var(--pf-nav-bg) !important;
+	backdrop-filter: blur(12px);
+	border-bottom: 1px solid var(--pf-border);
+}
+.site-navbar-target.scrolled {
+	background: var(--pf-nav-bg) !important;
+	box-shadow: 0 2px 12px rgba(0,0,0,0.24);
+}
+
+/* ============================================================
+   Hero (static)
+   ============================================================ */
+.hero-static {
+	position: relative;
+	min-height: 90vh;
+	display: flex;
+	align-items: center;
+	padding-top: 28px;
+	padding-bottom: 60px;
+}
+.hero-overlay, .hero-static > .hero-overlay {
+	/* alias for any legacy overlay selector */
+}
+.hero-static::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at 50% 50%, rgba(249,109,0,0.06), transparent 60%);
+	pointer-events: none;
+}
+.hero-content { position: relative; z-index: 2; }
+.hero-img {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 420px;
+	border-radius: var(--pf-radius);
+}
+.hero-float-card {
+	position: absolute;
+	bottom: 16px;
+	right: 0;
+	background: var(--pf-bg-card);
+	border: 1px solid var(--pf-border);
+	border-radius: var(--pf-radius-card);
+	padding: 12px 14px;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.hero-float-card.hero-card-2 { bottom: 0; right: 12px; }
+.hero-btn-primary { background: var(--pf-accent); border-color: var(--pf-accent); color: #fff; }
+.hero-btn-secondary { color: var(--pf-accent); border-color: var(--pf-accent); }
+.hero-eyebrow { color: var(--pf-accent); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; font-size: 13px; }
+.hero-title { font-weight: 800; letter-spacing: -0.02em; }
+.hero-subtitle { color: var(--pf-text-muted); }
+.hero-status { display: inline-flex; align-items: center; gap: 8px; color: var(--pf-text-muted); font-size: 14px; }
+.status-dot {
+	width: 10px; height: 10px;
+	border-radius: 50%;
+	background: #16a34a;
+	display: inline-block;
+	box-shadow: 0 0 0 0 rgba(22,163,74,0.6);
+	animation: pulse 2s infinite;
+}
+
+/* ============================================================
+   Tech marquee
+   ============================================================ */
+.tech-strip {
+	padding: 18px 0;
+	border-top: 1px solid var(--pf-border);
+	border-bottom: 1px solid var(--pf-border);
+	background: var(--pf-bg-card);
+	margin-bottom: 32px;
+}
+.tech-strip-label { font-size: 12px; color: var(--pf-accent); text-transform: uppercase; letter-spacing: 1px; }
+.tech-marquee { overflow: hidden; }
+.tech-marquee__track {
+	display: flex;
+	gap: 14px;
+	animation: scroll-left 22s linear infinite;
+}
+.tech-marquee__item {
+	font-family: var(--pf-font-mono);
+	font-size: 13px;
+	color: var(--pf-text-muted);
+	white-space: nowrap;
+}
+@keyframes scroll-left {
+	from { transform: translateX(0); }
+	to   { transform: translateX(-50%); }
+}
+@keyframes pulse {
+	0%,100% { box-shadow: 0 0 0 0 rgba(22,163,74,0.5); }
+	50%   { box-shadow: 0 0 0 6px rgba(22,163,74,0); }
+}
+
+/* ============================================================
+   About
+   ============================================================ */
+.pf-about-photo .img {
+	border-radius: var(--pf-radius-card);
+	overflow: hidden;
+}
+.pf-about-photo .img {
+	background-color: var(--pf-bg-card);
+}
+.pf-about-heading { font-weight: 800; }
+.pf-about-lead { color: var(--pf-text-muted); }
+.pf-about-focus { color: var(--pf-accent); }
+.pf-about-meta li { margin-bottom: 6px; }
+.pf-about-meta span { color: var(--pf-text-muted); }
+.pf-about-meta a { color: var(--pf-accent); }
+.pf-page-title {
+	font-size: 2.1rem;
+	font-weight: 800;
+	margin-bottom: 8px;
+}
+
+/* ============================================================
+   Focus rings (kbd/a/button)
+   ============================================================ */
+.pf-project-card,
+.pf-capability-card,
+a, button, .btn, input, textarea, select {
+	 outline-offset: 2px;
+}
+.pf-project-card:focus-within,
+a:focus,
+button:focus,
+.btn:focus {
+	outline: 2px solid var(--pf-accent);
+	outline-offset: 2px;
+}
+
+/* ============================================================
+   Project cards
+   ============================================================ */
+.pf-projects { gap: 24px; }
+.pf-project-card {
+	display: block;
+	position: relative;
+	border-radius: var(--pf-radius-card);
+	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
+	border: 1px solid var(--pf-border);
+	background: var(--pf-bg-card);
+	transition: var(--pf-transition);
+	box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+.pf-project-card:hover {
+	transform: translateY(-4px);
+	box-shadow: 0 14px 32px rgba(0,0,0,0.22);
+	border-color: var(--pf-accent-soft);
+}
+.pf-project-card__image {
+	height: 180px;
+	background-size: cover;
+	background-position: center;
+}
+.pf-project-card__overlay {
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.32) 100%);
+	opacity: 0;
+	transition: opacity var(--pf-transition);
+}
+.pf-project-card:hover .pf-project-card__overlay { opacity: 1; }
+.pf-project-card__content { padding: 18px; }
+.pf-project-card__meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.pf-project-card__category {
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--pf-accent);
+	font-weight: 700;
+}
+.pf-project-card__role {
+	font-size: 12px;
+	color: var(--pf-text-muted);
+}
+.pf-project-card__title { font-size: 1.15rem; margin: 0 0 6px; }
+.pf-project-card__desc {
+	font-size: 0.92rem;
+	color: var(--pf-text-muted);
+	margin-bottom: 12px;
+}
+.pf-project-card__tech { display: flex; flex-wrap: wrap; gap: 4px 8px; margin-bottom: 12px; }
+.pf-project-card__tech span {
+	font-family: var(--pf-font-mono);
+	font-size: 11px;
+	color: var(--pf-text-muted);
+	background: var(--pf-border-soft);
+	padding: 2px 8px;
+	border-radius: 999px;
+}
+.pf-project-card__link {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--pf-accent);
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+
+/* Case study pages */
+.pf-case-header {
+	position: relative;
+	min-height: 52vh;
+	display: flex;
+	align-items: center;
+	padding-top: 64px;
+	padding-bottom: 56px;
+}
+.pf-case-header__img {
+	position: absolute;
+	inset: 0;
+	background-size: cover;
+	background-position: center;
+	filter: brightness(0.55) saturate(1.05);
+}
+.pf-case-header .container { position: relative; z-index: 2; }
+.pf-case-title { font-size: 2.4rem; font-weight: 800; }
+.pf-case-subtitle { color: var(--pf-text-muted); margin-top: 8px; }
+.pf-case-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 16px 0;
+	align-items: center;
+}
+.pf-case-meta span {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 13px;
+	color: var(--pf-text-muted);
+	font-family: var(--pf-font-mono);
+}
+.pf-case-meta span strong { color: var(--pf-text); }
+.pf-case-tag {
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--pf-accent);
+	font-weight: 700;
+}
+.pf-case-nav {
+	display: flex;
+	gap: 12px;
+	margin-top: 14px;
+}
+.pf-case-nav a {
+	font-size: 13px;
+	font-weight: 600;
+	color: var(--pf-accent);
+	text-decoration: none;
+}
+.pf-case-nav a i { margin-left: 4px; }
+.pf-case-section { margin: 48px 0; }
+.pf-case-section h2 { font-size: 1.4rem; margin-bottom: 14px; }
+.pf-case-section p { color: var(--pf-text-muted); line-height: 1.65; }
+.pf-case-tech { display: flex; flex-wrap: wrap; gap: 6px 10px; margin: 16px 0; }
+.pf-case-tech span {
+	font-family: var(--pf-font-mono);
+	font-size: 12px;
+	color: var(--pf-text);
+	background: var(--pf-border-soft);
+	padding: 4px 10px;
+	border-radius: 999px;
+}
+
+/* ============================================================
+   Capability cards
+   ============================================================ */
+.pf-capability-card {
+	background: var(--pf-bg-card);
+	border: 1px solid var(--pf-border);
+	border-radius: var(--pf-radius-card);
+	padding: 22px;
+	text-align: center;
+	transition: var(--pf-transition);
+}
+.pf-capability-card:hover {
+	transform: translateY(-4px);
+	border-color: var(--pf-accent-soft);
+}
+.pf-capability-card i {
+	font-size: 2rem;
+	color: var(--pf-accent);
+	margin-bottom: 12px;
+}
+.pf-capability-card h3 { font-size: 1.05rem; }
+
+/* ============================================================
+   Build steps / process
+   ============================================================ */
+.pf-steps { display: flex; flex-direction: column; gap: 16px; }
+.pf-step-item {
+	display: flex;
+	gap: 14px;
+	padding: 16px;
+	background: var(--pf-bg-card);
+	border: 1px solid var(--pf-border);
+	border-radius: var(--pf-radius);
+	transition: var(--pf-transition);
+}
+.pf-step-item:before {
+	content: attr(data-step);
+	font-family: var(--pf-font-mono);
+	font-size: 13px;
+	color: var(--pf-accent);
+	font-weight: 700;
+}
+.pf-step-item:hover { border-color: var(--pf-accent-soft); }
+
+/* ============================================================
+   Stack groups
+   ============================================================ */
+.pf-stack-group { display: flex; flex-wrap: wrap; gap: 12px; }
+.pf-stack-card {
+	font-family: var(--pf-font-mono);
+	font-size: 13px;
+	color: var(--pf-text);
+	background: var(--pf-bg-card);
+	border: 1px solid var(--pf-border);
+	border-radius: 10px;
+	padding: 10px 14px;
+	transition: var(--pf-transition);
+}
+
+/* ============================================================
+   Experience timeline
+   ============================================================ */
+.pf-experience-item {
+	padding-left: 24px;
+	position: relative;
+	margin-bottom: 22px;
+}
+.pf-experience-item:before {
+	content: "";
+	position: absolute;
+	left: 0; top: 4px; bottom: -12px;
+	width: 3px;
+	background: var(--pf-accent);
+}
+.pf-experience-item .pf-exp-role { font-weight: 600; }
+.pf-experience-item .pf-exp-dates { color: var(--pf-text-muted); font-size: 13px; }
+.pf-experience-item .pf-exp-company { color: var(--pf-accent); }
+
+/* ============================================================
+   Contact + final CTA
+   ============================================================ */
+.pf-formspree-placeholder { border: 2px dashed var(--pf-accent); }
+.pf-final-cta {
+	background: linear-gradient(135deg, var(--pf-bg-card), var(--pf-bg-card-alt));
+	border: 1px solid var(--pf-border);
+	border-radius: var(--pf-radius-card);
+	padding: 32px 28px;
+	text-align: center;
+}
+.pf-final-cta a { background: var(--pf-accent); }
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.ftco-footer { background: var(--pf-bg-card); border-top: 1px solid var(--pf-border); }
+.pf-footer-name { color: var(--pf-text); }
+.pf-footer-title { color: var(--pf-accent); }
+.pf-footer-cta-btn {
+	background: var(--pf-accent);
+	color: #fff;
+	border-radius: 999px;
+	padding: 8px 18px;
+	display: inline-block;
+}
+
+/* ============================================================
+   Scroll-driven card reveal (progressive enhancement)
+   ============================================================ */
+@media (prefers-reduced-motion: no-preference) {
+	.pf-project-item,
+	.pf-capability-item,
+	.pf-step-item,
+	.pf-stack-group,
+	.pf-experience-item,
+	.pf-education-item {
+		opacity: 0;
+		transform: translateY(18px);
+		transition: opacity 520ms ease, transform 520ms ease;
+	}
+	.pf-project-item.is-visible,
+	.pf-capability-item.is-visible,
+	.pf-step-item.is-visible,
+	.pf-stack-group.is-visible,
+	.pf-experience-item.is-visible {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+/* ============================================================
+   Quick links row (footer social)
+   ============================================================ */
+.pf-quick-links {
+	display: flex;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+.pf-quick-links a {
+	color: var(--pf-text-muted);
+	font-size: 1.15rem;
+	transition: color var(--pf-transition);
+}
+.pf-quick-links a:hover { color: var(--pf-accent); }
+
+/* ============================================================
+   Cursor (hidden when JS disabled / reduced motion)
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+	.pf-cursor { display: none !important; }
+}
+
+/* ============================================================
+   Utility classes (for JS-driven theme text)
+   ============================================================ */
+[data-theme="light"] { --pf-accent: #F96D00; }
+[data-theme="dark"] { --pf-accent: #F96D00; }

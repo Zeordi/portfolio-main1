@@ -1,13 +1,13 @@
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/variables';
 
-$font-primary: 'Poppins',Arial, sans-serif;
+$font-primary: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
 
 $white: #fff;
 $black: #000000;
 $darken: #232931;
 
-$primary: #b1b493;
+$primary: var(--pf-accent);
 $secondary: #a0f669;
 
 
